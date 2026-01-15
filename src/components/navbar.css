@@ -1,0 +1,204 @@
+#social_icons svg:hover {
+    background-color: #fff;
+    padding: 8%;
+    border-radius: 2px;
+    color: black;
+}
+
+#main_nav a {
+    transition: all 0.4s ease-in-out;
+}
+
+#main_nav a:hover {
+    background-color: #FFFFFF;
+    color: #FF6319;
+}
+
+#automotive:hover .automotive_sub {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#industrial:hover #industrial_sub,
+#merin:hover #marin_sub,
+#Agriculture:hover #agriculture_sub,
+#gear_transmission:hover #gear_sub,
+#specialized:hover #specialized_sub,
+#corporate:hover #corporate_sub {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.top_arrow {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(0px);
+    transition: transform 0.35s ease;
+}
+
+#automotive:hover .top_arrow {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-60px);
+}
+
+/* Automotive Sub menu */
+.automotive_sub {
+    top: 100%;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s;
+}
+
+.automotive_sub li {
+    padding: 8px 3px;
+}
+
+.automotive_sub li:hover,
+#agriculture_sub li:hover {
+    background-color: #FFFFFF;
+    color: #303393;
+}
+
+
+/* Industrial Sub */
+#industrial_sub,
+#marin_sub,
+#agriculture_sub,
+#gear_sub,
+#specialized_sub,
+#corporate_sub {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s;
+
+}
+
+.show {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0px);
+
+    transition:
+        opacity 0.35s ease-in-out,
+        transform 0.35s ease-in-out,
+        visibility 0.35s ease-in-out;
+}
+
+.responsive_Nav {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-500px);
+
+    transition:
+        opacity 0.35s ease-in-out,
+        transform 0.35s ease-in-out,
+        visibility 0.35s ease-in-out;
+
+}
+
+#industrial_sub li,
+#merin li,
+#agriculture_sub li,
+#gear_sub li,
+#specialized_sub li,
+#corporate_sub li {
+    padding: 8px 1px;
+    padding-left: 3px;
+}
+
+#industrial_sub li:hover,
+#merin li:hover,
+#gear_sub li:hover,
+#specialized_sub li:hover,
+#corporate_sub li:hover {
+    background-color: #FFFFFF;
+    color: #2E3192;
+}
+
+#industrial:hover .industirall_top_arrow,
+#Agriculture:hover .agriculture_top_arrow,
+#gear_transmission:hover .gear_top_arrow,
+#merin:hover .marin_top_arrow,
+#specialized:hover .specialized_top_arrow {
+    left: 5%;
+    opacity: 1;
+    transition:
+        left 0.35s ease,
+        opacity 0.35s ease
+}
+
+#corporate:hover .corporate_top_arrow {
+    left: 80%;
+    opacity: 1;
+    transition:
+        left 0.35s ease,
+        opacity 0.35s ease
+}
+
+
+/* Responsive nav */
+.responsive_ul li {
+    padding: 5% 3%;
+    border-top: 1px solid #00060c;
+    border-bottom: 1px solid #05458a;
+}
+#top_arrow svg{
+color: #0A1D31;
+/* color: #fff; */
+font-size:larger;
+}
+.responsive_ul li:first-child {
+    padding: 5% 3%;
+    border-top: none
+}
+
+#call {
+    display: none;
+}
+
+#threeLine {
+    font-size: 2em;
+    font-weight: bolder;
+    display: none;
+}
+
+/* responsive menu */
+@media only screen and (max-width: 1000px) {
+    #main_nav {
+        display: none;
+    }
+
+    #company_logo {
+        justify-self: center;
+
+    }
+
+    #call {
+        display: flex;
+    }
+
+    #threeLine {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #call {
+        display: none;
+    }
+}
