@@ -10,23 +10,48 @@ import { ImCross } from "react-icons/im";
 import './navbar.css'
 import icon from '../../public/icons/sigma-oil-logo.png'
 import { NavLink } from "react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 const Navbar = () => {
-    let [value, setValue] = useState("");
-    const handle_sub_menu = (menuName) => {
-        // setValue(prev => !prev);
-        setValue(prev => (prev === menuName ? "" : menuName));
-    }
+    const [value, setValue] = useState(null);
+    const handle_sub_menu = (menu) => {
+        setValue(prev => (prev === menu ? null : menu));
+    };
+    let [openHide, setOpenHight] = useState(false);
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0)
+    // let hideAndOpenMenu = (value) => {
+    //     setOpenHight(value);
+    // }
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+    const handleTouchEnd = () => {
+        if (touchStartX.current - touchEndX.current > 70) {
+            setOpenHight(false); // swipe left → close
+        }
+    };
+
 
     return (
         <>
-            <div className="flex items-center justify-between  px-5 bg-[#002776] py-2">
-                <div id="Responsive_icon" className="relative">
+            <div id="nav" className="flex items-center justify-between  px-5 bg-[#002776] py-2  ">
+                <div onClick={() => setOpenHight(true)} id="Responsive_icon" className="relative ">
                     <IoReorderThreeOutline id="threeLine" />
                 </div>
+                {/* Overlay (click outside to close) */}
+                <div
+                    onClick={() => setOpenHight(false)}
+                    className={`fixed inset-0 bg-black/40 transition-opacity duration-300 z-40
+                    ${openHide ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                ></div>
                 {/* Responsive Nav */}
-                <div id="responsive_nav" className="absolute top-0 left-0 bg-[#032E5B] h-[100vh] w-[45%] overflow-scroll z-10 ">
-                    <div id="cross_icon" className="absolute right-3 top-2">
+                <div id="responsive_nav" className={`fixed top-0 overflow-scroll left-0 h-screen w-[75%] md:w-[45%] bg-[#032E5B] z-50
+                        transform transition-transform duration-500 ease-in-out
+                        ${openHide ? "translate-x-0" : "-translate-x-full"}`}>
+                    <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={() => setOpenHight(false)} id="cross_icon" className="absolute right-3 top-2">
                         <ImCross id="cross_icon" />
                     </div>
                     <div id="responsive_icon" className="w-[40%] mx-auto pt-[5%]">
@@ -35,14 +60,14 @@ const Navbar = () => {
                     <div className="border-b-1 border-[#4c5f8c] pt-7 w-[95%] mx-auto"></div>
                     <ul className="responsive_ul relative">
                         <li className="h-10"></li>
-                        <li className={`flex justify-between items-center relative ${value === "Automotive" ? "max-h-96": "max-h-0"} `}>Automotive
+                        <li className={`flex  justify-between items-center relative ${value === "Automotive" ? "" : ""}`}>Automotive
                             <div onClick={() => handle_sub_menu('Automotive')} >
                                 {
                                     value === "Automotive" ? <TiMinus /> : <FaPlus />
                                 }
                             </div>
                             {
-                                value === "Automotive" ? <ul id="" className="absolute w-full left-0 top-[100%] z-10 bg-[#0A1D31]">
+                                value === "Automotive" ? <ul id="" className=" absolute  w-full left-0 top-[100%] z-10 bg-[#0A1D31]">
                                     <li className="relative">Motorcycle
                                         <div id="top_arrow" className="absolute top-[-12px] ">
                                             <TiArrowSortedUp />
@@ -55,14 +80,14 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative  ${value === "Automotive" ? '' : ''}`}>Industrial
+                        <li className={`flex justify-between items-center transition-all duration-300  ${value === "Automotive" ? "h-[500px]" : "h-[0px]"}`}>Industrial
                             <div onClick={() => handle_sub_menu('Industrial')} >
                                 {
                                     value === "Industrial" ? <TiMinus id="" className="" /> : <FaPlus id="" />
                                 }
                             </div>
                             {
-                                value === "Industrial" ? <ul id="" className="absolute  left-0 top-[100%] z-10 bg-[#0A1D31] w-[100%]">
+                                value === "Industrial" ? <ul id="" className="absolute left-0 top-[100%] z-10 bg-[#0A1D31] w-[100%]">
 
                                     <li className="relative">Soil
                                         <div id="top_arrow" className="absolute top-[-12px]">
@@ -73,7 +98,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative${value === "Industrial" ? '' : ''}`}>Marine
+                        <li className={`flex justify-between items-center  ${value === "Industrial" ? '' : ''}`}>Marine
                             <div onClick={() => handle_sub_menu('Marine')} >
                                 {
                                     value === "Marine" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -91,7 +116,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Marine" ? 'mt-[60%]' : ''}`}>Agriculture
+                        <li className={`flex justify-between items-center relative ${value === "Marine" ? 'mt-[100%]' : ''}`}>Agriculture
                             <div onClick={() => handle_sub_menu('Agriculture')} >
                                 {
                                     value === "Agriculture" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -109,7 +134,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Agriculture" ? 'absolute bottom-[-310%]' : ''}`}>Gear & Transmission
+                        <li className={`flex justify-between items-center relative ${value === "Agriculture" ? 'mt-[100%]' : ''}`}>Gear & Transmission
                             <div onClick={() => handle_sub_menu('Gear')} >
                                 {
                                     value === "Gear" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -127,7 +152,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Gear" ? 'mt-[59%]' : ''}`}>Specialized
+                        <li className={`flex justify-between items-center relative ${value === "Gear" ? 'mt-[100%]' : ''}`}>Specialized
                             <div onClick={() => handle_sub_menu('Specialized')} >
                                 {
                                     value === "Specialized" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -144,7 +169,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Specialized" ? 'mt-[39%]' : ''}`}>Corporate
+                        <li className={`flex justify-between items-center relative ${value === "Specialized" ? 'mt-[100%]' : ''}`}>Corporate
                             <div onClick={() => handle_sub_menu('Corporate')} >
                                 {
                                     value === "Corporate" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -264,16 +289,18 @@ const Navbar = () => {
                 </nav>
 
                 <div className="flex  items-center justify-end gap-3  border-l-1 pl-2 mr-3 border-dotted">
-                    <div className=" bg-[#FF6319] p-2 rounded">
-                        <IoCallSharp />
-                    </div>
+                    <a href="tel:+88-01700-760430">
+                        <div className=" bg-[#FF6319] p-2 rounded">
+                            <IoCallSharp />
+                        </div>
+                    </a>
                     <div id="call" className="flex flex-col">
                         <h2>Call Us Today</h2>
                         <a href="tel:+88-01700-760430" aria-label="Phone Number"> <span>+88-01700-760430</span></a>
                     </div>
                     <div id="social_icons" className="flex flex-col gap-3">
-                        <a href=""><FaFacebookF className="social_icons " /></a>
-                        <a href=""> <FaYoutube className="social_icons  " /></a>
+                        <a href="https://www.youtube.com/@soil_bd" target="_black"><FaFacebookF className="social_icons " /></a>
+                        <a href="https://www.facebook.com/sigmaoilindustriesltd/" target="_blank"> <FaYoutube className="social_icons  " /></a>
 
                     </div>
                 </div>
