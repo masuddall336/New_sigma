@@ -5,6 +5,9 @@ import { NavLink } from 'react-router'
 import manufacturing from "../../../public/img/manufacturing.svg"
 import blending from "../../../public/img/blending.svg"
 import laboratory from "../../../public/img/laboratory.svg"
+import { FaArrowRightLong } from "react-icons/fa6";
+
+
 import './home.css'
 
 const Home = () => {
@@ -118,7 +121,7 @@ const Home = () => {
           <div id='bottom_catagory' className='flex flex-wrap gap-5 justify-between py-20'>
             <div className='flex items-center gap-5'>
               <img src={manufacturing} alt="manufacturing_icon" />
-             <NavLink><p className='text-2xl font-bold'>Manufacturing</p></NavLink>
+              <NavLink><p className='text-2xl font-bold'>Manufacturing</p></NavLink>
             </div>
             <div className='flex items-center gap-5'>
               <img src={blending} alt="blending" />
@@ -131,8 +134,16 @@ const Home = () => {
           </div>
         </section>
         {/* Why Chose Us */}
-        <section >
-
+        <section className='px-[21%] mx-auto bg-[#fff] pt-15'>
+          <h2 className='text-center text-4xl font-bold text-[#032e5b] pb-18'>Why Choose Sigma Oil</h2>
+          <div id='quc' className='w-70% mx-auto cursor-pointer'>
+            <div id='question' className='flex'>
+              <h3 className='text-[#fff] flex items-center justify-between px-3 py-2 rounded-[3px] bg-[#002776] w-full'>Use Of Modern Technology <FaArrowRightLong /></h3>
+            </div>
+            <div id='cllups_ans' className='border-[#000] border-1 border-[#999696] py-3 pl-2 mt-[-1px]'>
+              <p className='text-[#404040]'>We use modern technology to process and refine products. It allows us to provide you with the right products.</p>
+            </div>
+          </div>
         </section>
       </main>
     </div>
