@@ -22,10 +22,10 @@ const Home = () => {
       <main className="home">
         <div className="home-header">
           <p className="tagline">Sigma Oil - quality meets desires</p>
-          <h2 className="title">High Quality Lubricating Oil Company.</h2>
+          <h2 className="title tracking-wide">High Quality Lubricating Oil Company.</h2>
         </div>
 
-        <div className="home-content">
+        <div className="home-content pb-15">
           {/* LEFT CONTENT */}
           <div className="left-content">
             <p className="description">
@@ -35,7 +35,7 @@ const Home = () => {
               boost the power of quality oil.
             </p>
 
-            <h3 className="subtitle">
+            <h3 className="subtitle tracking-wide">
               We provide lube oil for a wide range of machines including
             </h3>
 
@@ -71,21 +71,31 @@ const Home = () => {
         </div>
         {/* third item */}
         <section>
-          <div id="product_section_home">
+          <div id="product_section_home" className='px-[1%] py-15'>
+
+
             <p className='text-[#ad0000] italic font-bold'>High performance</p>
-            <h2 className='text-[#032e5b] text-5xl font-bold'>Lubricating Oil / Products We Provide</h2>
-            <div id='' className='grid grid-cols-4 gap-2'>
-              {products.map(product => {
-                console.log('Product:', product); // Debug each product
+            <h2 className='text-[#032e5b] text-4xl tracking-wide font-bold pb-5'>Lubricating Oil / Products We Provide</h2>
+
+
+            <div id='' className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-1'>
+              {products.map(product => {  
                 return (
-                  <div key={product.id} className="product-card border shadow-md ">
-                    <img src={product.img} alt={product.product_name} className="w-full  object-cover relative  " />
-                    <h3 className="text-xl font-bold  text-[#fff] bg-[#322a2a7b] absolute ">{product.product_name}</h3>
-                    <div className='hidden'>
-                      <p className="text-gray-700">{product.product_description}</p>
-                      <button>{product.button_name}</button>
+                  <NavLink>
+                    <div key={product.id} className="product-card overflow-hidden border   shadow-md relative ">
+                      <img src={product.img} alt={product.product_name} className="w-full relative  object-cover" />
+                      <h3 className="initial_product_name text-xl font-bold  text-[#fff] bg-[#322a2a7b] absolute bottom-0 w-full pt-7 pb-4 pl-3">{product.product_name}</h3>
+
+
+                      <div className='product_description h-full flex flex-col justify-center px-1'>
+                        <h3 className="text-xl font-bold text-[#fff] pb-1">{product.product_name}</h3>
+                        <p className="text-[#fff] text-[13px]">{product.product_description}</p>
+                        <button className='bg-[#1A88F8] w-full text-[13px] mt-1 text-left mx-auto px-1 py-3 cursor-pointer'>{product.button_name}</button>
+                      </div>
+
+
                     </div>
-                  </div>
+                  </NavLink>
                 );
               })}
             </div>
