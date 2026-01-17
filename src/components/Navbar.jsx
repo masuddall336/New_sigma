@@ -197,7 +197,7 @@ const Navbar = () => {
 
 
                 {/* main nav */}
-                <NavLink className="company_logo w-20 j ">
+                <NavLink className="company_logo w-17">
                     <img id="company_logo" src={icon} alt="" />
                 </NavLink>
                 <nav className=" pr-2 lg:flex-1">
@@ -289,7 +289,7 @@ const Navbar = () => {
                 </nav>
 
                 <div className="flex  items-center justify-end gap-3  border-l-1 pl-2 mr-3 border-dotted">
-                    <a href="tel:+88-01700-760430">
+                    <a id="call_icon" href="tel:+88-01700-760430">
                         <div className=" bg-[#FF6319] p-2 rounded">
                             <IoCallSharp />
                         </div>

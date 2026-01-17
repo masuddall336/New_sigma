@@ -1,7 +1,17 @@
 /* GLOBAL */
+.bg_img {
+  background-image: url('../../../public/img/tank_bg_big.jpg');
+  color: rgb(255, 255, 255);
+  padding: 0px;
+  background-size: cover;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
 .home {
-  background: #fff;
-  padding: 5% 0;
+
   font-family: Arial, sans-serif;
 }
 
@@ -107,7 +117,8 @@
 
   transition: transform 0.35s ease, opacity 0.35s ease;
 }
-.product_description button{
+
+.product_description button {
   border-radius: 2px;
 }
 
@@ -150,7 +161,8 @@
   .home-content {
     flex-direction: column;
   }
-  .product_description h3{
+
+  .product_description h3 {
     font-size: 1.2rem;
   }
 }
@@ -162,8 +174,9 @@
   .home-content {
     width: 90%;
   }
-  .product_description h3{
-    font-size:10px;
+
+  .product_description h3 {
+    font-size: 10px;
   }
 
   .title {
@@ -187,7 +200,8 @@
     transform: translateY(0);
     opacity: 1;
   }
-  .product_description p{
+
+  .product_description p {
     font-size: 20px;
 
   }
@@ -201,4 +215,66 @@
     visibility: hidden;
   }
 
+  #top_since h2 {
+    font-size: 50px;
+  }
+
+  #top_since p {
+    text-align: left;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  #top_since h2 {
+    font-size: 40px;
+  }
+
+  #top_since h1 {
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 866px) {
+  #top_since h2 {
+    font-size: 30px;
+  }
+
+  #top_since h1 {
+    font-size: 30px;
+  }
+
+  #top_since p {
+    font-size: 15px;
+  }
+
+  #bottom_catagory p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 622px) {
+  #top_since h2 {
+    font-size: 25px;
+  }
+
+  #top_since h1 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 515px) {
+  #top_since h2 {
+    font-size: 20px;
+  }
+
+  #top_since h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  #top_since {}
 }

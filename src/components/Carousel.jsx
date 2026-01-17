@@ -57,7 +57,7 @@ export default function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000); // Auto-play every 4s
+    }, 8000); // Auto-play every 4s
     return () => clearInterval(interval);
   }, [current]);
 
@@ -72,7 +72,7 @@ export default function Carousel() {
             <div 
               key={index}
               className={className}
-              style={{  backgroundImage: `url(${slide.image})` }}
+              style={{ backgroundImage: `url(${slide.image})`, backgroundPosition:'left'}}
             >
               <div className="carousel-content">
                 <h1>{slide.title}</h1>

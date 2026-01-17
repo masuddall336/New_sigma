@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Carousel from '../Carousel'
 import product_right from "../../../public/img/one_ltr_product.jpg"
 import { NavLink } from 'react-router'
+import manufacturing from "../../../public/img/manufacturing.svg"
+import blending from "../../../public/img/blending.svg"
+import laboratory from "../../../public/img/laboratory.svg"
 import './home.css'
 
 const Home = () => {
@@ -17,57 +20,60 @@ const Home = () => {
       .catch(err => console.error(err));
   }, []);
   return (
-    <div>
+    <div className=''>
       <Carousel></Carousel>
-      <main className="home">
-        <div className="home-header">
-          <p className="tagline">Sigma Oil - quality meets desires</p>
-          <h2 className="title tracking-wide">High Quality Lubricating Oil Company.</h2>
-        </div>
-
-        <div className="home-content pb-15">
-          {/* LEFT CONTENT */}
-          <div className="left-content">
-            <p className="description">
-              <strong>Sigma Oil Industries Limited </strong>
-              is a top-rated lubricating oil company that produces and provides
-              top-graded lube oil, meeting the needs of all types of engines to
-              boost the power of quality oil.
-            </p>
-
-            <h3 className="subtitle tracking-wide">
-              We provide lube oil for a wide range of machines including
-            </h3>
-
-            <div className="categories">
-              <ul>
-                <li><NavLink>Automotive ⤏</NavLink></li>
-                <li><NavLink>Industrial ⤏</NavLink></li>
-                <li><NavLink>Marine ⤏</NavLink></li>
-              </ul>
-
-              <ul>
-                <li><NavLink>Agriculture ⤏</NavLink></li>
-                <li><NavLink>Gear & Transmission ⤏</NavLink></li>
-                <li><NavLink>Specialized ⤏</NavLink></li>
-              </ul>
-            </div>
-
-            <p className="description">
-              <strong>Sigma Oil Industries Limited </strong>
-              produces and provides lower carbon, quality petrochemical products
-              with a commitment to sustainability standards for today and the future.
-            </p>
-
-            <button className="about-btn">
-              ABOUT SIGMA OIL INDUSTRIES LIMITED
-            </button>
+      <main className="home bg_img">
+        <div className='bg-[#fff] pt-15'>
+          <div className="home-header ">
+            <p className="tagline">Sigma Oil - quality meets desires</p>
+            <h2 className="title tracking-wide">High Quality Lubricating Oil Company.</h2>
           </div>
+          <div className=''>
+            <div className="home-content pb-15 ">
+              {/* LEFT CONTENT */}
+              <div className="left-content">
+                <p className="description">
+                  <strong>Sigma Oil Industries Limited </strong>
+                  is a top-rated lubricating oil company that produces and provides
+                  top-graded lube oil, meeting the needs of all types of engines to
+                  boost the power of quality oil.
+                </p>
 
-          {/* RIGHT IMAGE */}
-          <aside className="right-image">
-            <img src={product_right} alt="Sigma Oil Products" />
-          </aside>
+                <h3 className="subtitle tracking-wide">
+                  We provide lube oil for a wide range of machines including
+                </h3>
+
+                <div className="categories">
+                  <ul>
+                    <li><NavLink>Automotive ⤏</NavLink></li>
+                    <li><NavLink>Industrial ⤏</NavLink></li>
+                    <li><NavLink>Marine ⤏</NavLink></li>
+                  </ul>
+
+                  <ul>
+                    <li><NavLink>Agriculture ⤏</NavLink></li>
+                    <li><NavLink>Gear & Transmission ⤏</NavLink></li>
+                    <li><NavLink>Specialized ⤏</NavLink></li>
+                  </ul>
+                </div>
+
+                <p className="description">
+                  <strong>Sigma Oil Industries Limited </strong>
+                  produces and provides lower carbon, quality petrochemical products
+                  with a commitment to sustainability standards for today and the future.
+                </p>
+
+                <button className="about-btn">
+                  ABOUT SIGMA OIL INDUSTRIES LIMITED
+                </button>
+              </div>
+
+              {/* RIGHT IMAGE */}
+              <aside className="right-image">
+                <img src={product_right} alt="Sigma Oil Products" />
+              </aside>
+            </div>
+          </div>
         </div>
         {/* third item */}
         <section>
@@ -79,7 +85,7 @@ const Home = () => {
 
 
             <div id='' className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-1'>
-              {products.map(product => {  
+              {products.map(product => {
                 return (
                   <NavLink>
                     <div key={product.id} className="product-card overflow-hidden border   shadow-md relative ">
@@ -89,11 +95,9 @@ const Home = () => {
 
                       <div className='product_description h-full flex flex-col justify-center px-1'>
                         <h3 className="text-xl font-bold text-[#fff] pb-1">{product.product_name}</h3>
-                        <p className="text-[#fff] text-[13px]">{product.product_description}</p>
+                        <p className="text-[#fff] text-[13px] ">{product.product_description}</p>
                         <button className='bg-[#1A88F8] w-full text-[13px] mt-1 text-left mx-auto px-1 py-3 cursor-pointer'>{product.button_name}</button>
                       </div>
-
-
                     </div>
                   </NavLink>
                 );
@@ -101,9 +105,38 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <section id='proficiant' className='px-[8%]'>
+          <div id='top_since' className='flex-row sm:flex gap-5  justify-between items-center border-b-2 py-20 border-b-amber-50'>
+            <div>
+              <h2 className='text-5xl font-bold uppercase'>We are proficient at</h2>
+            </div>
+            <div>
+              <h1 className='text-5xl font-bold uppercase'>Since 2004</h1>
+              <NavLink><p className=' text-2xl text-end    pt-2'>Producing Fine Oil</p></NavLink>
+            </div>
+          </div>
+          <div id='bottom_catagory' className='flex flex-wrap gap-5 justify-between py-20'>
+            <div className='flex items-center gap-5'>
+              <img src={manufacturing} alt="manufacturing_icon" />
+             <NavLink><p className='text-2xl font-bold'>Manufacturing</p></NavLink>
+            </div>
+            <div className='flex items-center gap-5'>
+              <img src={blending} alt="blending" />
+              <NavLink><p className='text-2xl font-bold'>Blending</p></NavLink>
+            </div>
+            <div className='flex items-center gap-5'>
+              <img src={laboratory} alt="laboratory" />
+              <NavLink><p className='text-2xl font-bold'>Laboratory</p></NavLink>
+            </div>
+          </div>
+        </section>
+        {/* Why Chose Us */}
+        <section >
+
+        </section>
       </main>
     </div>
   )
 }
 
-export default Home
+export default Home;

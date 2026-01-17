@@ -199,7 +199,12 @@
   .carousel-content h1 {
     font-size: 32px;
   }
-  .product_description h3{
+
+  .product_description h3 {
     font-size: 5px;
+  }
+
+  .carousel-container {
+    height: 40vh;
   }
 }
