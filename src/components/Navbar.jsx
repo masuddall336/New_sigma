@@ -60,14 +60,14 @@ const Navbar = () => {
                     <div className="border-b-1 border-[#4c5f8c] pt-7 w-[95%] mx-auto"></div>
                     <ul className="responsive_ul relative">
                         <li className="h-10"></li>
-                        <li className={`flex  justify-between items-center relative ${value === "Automotive" ? "" : ""}`}>Automotive
+                        <li className={`flex  justify-between items-center relative  ${value === "Automotive" ? "" : ""}`}>Automotive
                             <div onClick={() => handle_sub_menu('Automotive')} >
                                 {
                                     value === "Automotive" ? <TiMinus /> : <FaPlus />
                                 }
                             </div>
                             {
-                                value === "Automotive" ? <ul id="" className=" absolute  w-full left-0 top-[100%] z-10 bg-[#0A1D31]">
+                                value === "Automotive" ? <ul id="" className=" absolute   w-full left-0 top-[100%] z-10 bg-[#0A1D31]">
                                     <li className="relative">Motorcycle
                                         <div id="top_arrow" className="absolute top-[-12px] ">
                                             <TiArrowSortedUp />
@@ -80,7 +80,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center transition-all duration-300  ${value === "Automotive" ? "h-[500px]" : "h-[0px]"}`}>Industrial
+                        <li className={`flex justify-between items-center transition-all duration-300 relative  ${value === "Automotive" ? "mt-70 " : ""}`}>Industrial
                             <div onClick={() => handle_sub_menu('Industrial')} >
                                 {
                                     value === "Industrial" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -98,14 +98,14 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center  ${value === "Industrial" ? '' : ''}`}>Marine
+                        <li className={`flex justify-between items-center relative  transition-all duration-300 ${value === "Industrial" ? 'mt-27.5' : ''}`}>Marine
                             <div onClick={() => handle_sub_menu('Marine')} >
                                 {
                                     value === "Marine" ? <TiMinus id="" className="" /> : <FaPlus id="" />
                                 }
                             </div>
                             {
-                                value === "Marine" ? <ul id="" className="absolute inline-block left-0 top-[100%] z-10 bg-[#0A1D31] w-[100%]">
+                                value === "Marine" ? <ul id="" className="absolute  w-full left-0 top-[100%] z-10 bg-[#0A1D31]">
                                     <li className="relative">Merin Engin Oil
                                         <div id="top_arrow" className="absolute top-[-12px]">
                                             <TiArrowSortedUp />
@@ -116,14 +116,14 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Marine" ? 'mt-[100%]' : ''}`}>Agriculture
+                        <li className={`flex justify-between items-center relative transition-all duration-300 ${value === "Marine" ? 'mt-42' : ''}`}>Agriculture
                             <div onClick={() => handle_sub_menu('Agriculture')} >
                                 {
                                     value === "Agriculture" ? <TiMinus id="" className="" /> : <FaPlus id="" />
                                 }
                             </div>
                             {
-                                value === "Agriculture" ? <ul id="" className="absolute inline-block left-0 top-[100%] z-10 bg-[#0A1D31] w-[100%]">
+                                value === "Agriculture" ? <ul id="" className="absolute left-0 top-[100%] z-10 bg-[#0A1D31] w-[100%]">
                                     <li>Sigma
                                         <div id="top_arrow" className="absolute top-[-12px]">
                                             <TiArrowSortedUp />
@@ -134,7 +134,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Agriculture" ? 'mt-[100%]' : ''}`}>Gear & Transmission
+                        <li className={`flex justify-between items-center relative transition-all duration-300 ${value === "Agriculture" ? 'mt-42' : ''}`}>Gear & Transmission
                             <div onClick={() => handle_sub_menu('Gear')} >
                                 {
                                     value === "Gear" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -152,7 +152,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Gear" ? 'mt-[100%]' : ''}`}>Specialized
+                        <li className={`flex justify-between items-center relative transition-all duration-300  ${value === "Gear" ? 'mt-42' : ''}`}>Specialized
                             <div onClick={() => handle_sub_menu('Specialized')} >
                                 {
                                     value === "Specialized" ? <TiMinus id="" className="" /> : <FaPlus id="" />
@@ -169,7 +169,7 @@ const Navbar = () => {
                                 </ul> : ""
                             }
                         </li>
-                        <li className={`flex justify-between items-center relative ${value === "Specialized" ? 'mt-[100%]' : ''}`}>Corporate
+                        <li className={`flex justify-between items-center relative transition-all duration-300  ${value === "Specialized" ? 'mt-27.5' : ''}`}>Corporate
                             <div onClick={() => handle_sub_menu('Corporate')} >
                                 {
                                     value === "Corporate" ? <TiMinus id="" className="" /> : <FaPlus id="" />

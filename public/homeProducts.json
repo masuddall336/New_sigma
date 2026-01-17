@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "img": "./img/Motorcycle.jpg",
+    "product_name": "Motorcycle engine oil",
+    "product_description": "Your motorcycle engine will perform better with our premium motorcycle engine oil. Choose our oil to save more fuel and get better performance on your ride.",
+    "button_name": "Strengths of our bike engine oil  "
+  },
+  {
+    "id": 2,
+    "img": "./img/CNG.jpg",
+    "product_name": "Three-Wheeler Engine Oil",
+    "product_description": "Sigma, one of the most reliable engine oil brands in Bangladesh, has been delivering several  quality oil products for three - wheeler engines.",
+    "button_name": "Why Use Our Three-Wheeler Engine Oil?"
+  },
+  {
+    "id": 3,
+    "img": "./img/pryvetcar.jpg",
+    "product_name": "Passenger Car Engine Oil",
+    "product_description": "Sigma Oil Industries Limited offers you a high-quality passenger car engine oil that will protect and enhance the performance of engines in cars and light-duty trucks.",
+    "button_name": "Have the right passenger car oil"
+  },
+  {
+    "id": 4,
+    "img": "./img/lory.jpg",
+    "product_name": "Light-Duty Engine Oil",
+    "product_description": "We manufacture and distribute superior quality light-duty engine oil in Bangladesh. Use our light-duty engine oil to enhance your engine performance.",
+    "button_name": "Boost your light-duty engine"
+  },
+  {
+    "id": 5,
+    "img": "./img/buss.jpg",
+    "product_name": "Heavy-Duty Engine Oil",
+    "product_description": "Sigma Oil Industries Limited offers varieties of heavy-duty engine oil in Bangladesh. Get in touch with us for quality engine oil for your heavy-duty engines.",
+    "button_name": "Benefits of our heavy-duty engine oil"
+  },
+  {
+    "id": 6,
+    "img": "./img/industris.jpg",
+    "product_name": "Industrial Engine Oil ",
+    "product_description": "As one of the top-rated oil company in Bangladesh, we manufacture and supply high-quality Industrial Engine Oil at an affordable price.",
+    "button_name": "Power up your industrial engine"
+  },
+  {
+    "id": 7,
+    "img": "./img/marin.jpg",
+    "product_name": "Marine Engine Oil ",
+    "product_description": "As one of the top-rated oil company in Bangladesh, we manufacture and supply high-quality Marine Engine Oil at an affordable price.",
+    "button_name": " Power up your Marine Engine"
+  },
+  {
+    "id": 8,
+    "img": "./img/agriculturelubricant.jpg",
+    "product_name": "Agriculture Engine Oil ",
+    "product_description": "As one of the top-rated oil company in Bangladesh, we manufacture and supply high-quality agriculture oil at an affordable price.",
+    "button_name": " Power up your agricultural engine"
+  }
+]
