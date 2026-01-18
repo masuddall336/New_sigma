@@ -1,0 +1,17 @@
+.footer_wrapper {
+    background-image: url('../../public//img//sea-abstract-bg.jpg');
+    position: relative;
+    align-items: center;
+    color: #fff;
+}
+
+#footer_last_ul a{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    border-right: 2px solid #fff;
+    font-size: 12px;
+}
+#footer_last_ul a:last-child{
+   border-right: none;
+}

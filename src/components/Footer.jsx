@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { IoCall } from "react-icons/io5";
 import { GiFactory } from "react-icons/gi";
-
+import './footer.css'
 
 
 import footer_logo from '../../public/logo/sigma-oil-footer-logo.png'
@@ -13,10 +13,10 @@ import { NavLink } from "react-router";
 const Footer = () => {
   return (
     <div>
-      <footer>
-        <div id="top" className="flex justify-between gap-5">
+      <footer className="footer_wrapper">
+        <div id="top" className="flex flex-wrap justify-between  py-5 w-[95%] mx-auto">
           <div id="first_part_top" className="my-auto">
-            <img className="w-[70%]" src={footer_logo} alt="" />
+            <img className="w-[80%]" src={footer_logo} alt="" />
             <div className="flex items-center">
               <h3 className="text-xl mr-1">Follow us:</h3>
               <div id="social_icons" className="flex items-center gap-2">
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           {/* ===== */}
           <div id="second_part_top">
-            <h2 className="font-bold">Our Oil</h2>
+            <h2 className="font-bold pb-3 text-xl">Our Oil</h2>
             <ul className=" flex flex-col gap-2 pl-5 marker:text-[#FF6319] marker:content-['■']">
               <NavLink><li className="pl-2">Automotive</li></NavLink>
               <NavLink><li className="pl-2">Industrial</li></NavLink>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           {/* ====== */}
           <div id="third_part">
-            <h2 className="font-bold">Head OFFICE</h2>
+            <h2 className="font-bold pb-3 text-xl">Head OFFICE</h2>
             <div id="location_head_office" className="flex gap-1">
               <CiLocationOn />
               <a href="https://g.page/SOIL_BD?share" rel="nofollow noopener" target="_blank">Sena Kalyan Bhaban, 14th Floor,
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
           {/* ====== */}
           <div id="foth_par">
-            <h2 className="font-bold">FACTORY LOCATION</h2>
+            <h2 className="font-bold pb-3 text-xl">FACTORY LOCATION</h2>
             <div id="factory_location" className="flex gap-1">
               <GiFactory />
               <a href="https://goo.gl/maps/grXXa3tLw2GtWoLPA" rel="nofollow noopener" target="_blank">Kobaga
@@ -73,8 +73,25 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div id="bottom">
-
+        <div id="bottom" className="flex gap-40 items-center border-t-1 py-5  py-5 w-[95%] mx-auto">
+          {/* Left side */}
+          <div>
+            <ul id="footer_last_ul" className="flex gap-5">
+              <NavLink className=''><li className="">Corporate</li></NavLink>
+              <NavLink><li>Contact Us</li></NavLink>
+              <NavLink><li>Privacy Policy</li></NavLink>
+              <NavLink><li>Webmail</li></NavLink>
+              <NavLink><li>Sitemap</li></NavLink>
+            </ul>
+          </div>
+          {/* Right side */}
+          <div>
+            <details>
+              <summary>Copyright © 2026 Sigma Oil Industries Ltd | All rights reserved.</summary>
+              <p>All the content and creatives on this website are the property of Sigma Oil</p>
+            </details>
+            <p>Developed by <a className="text-sm text-[#686161]" href="">Abdullah Al - Masud</a></p>
+          </div>
         </div>
       </footer>
     </div>
