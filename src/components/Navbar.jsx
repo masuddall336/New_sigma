@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div id="nav" className="flex items-center justify-between  px-5 bg-[#002776] py-2">
+            <div id="nav" className="flex items-center justify-between  px-5 bg-[#002776] py-2 ">
                 <div onClick={() => setOpenHight(true)} id="Responsive_icon" className="relative ">
                     <IoReorderThreeOutline id="threeLine" />
                 </div>

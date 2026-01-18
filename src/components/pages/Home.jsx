@@ -6,6 +6,8 @@ import manufacturing from "../../../public/img/manufacturing.svg"
 import blending from "../../../public/img/blending.svg"
 import laboratory from "../../../public/img/laboratory.svg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa";
+
 
 
 import './home.css'
@@ -14,14 +16,21 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/homeProducts.json') // correct public path
+    fetch('/homeProducts.json')
       .then(res => res.json())
       .then(data => {
-        console.log('Fetched products:', data); // Debug
         setProducts(data);
       })
       .catch(err => console.error(err));
   }, []);
+  const [toggleQuc, setToggoleQuc] = useState('first');
+  const handleToggleQuc = (targeted_quc) => {
+    setToggoleQuc(prev => (prev === targeted_quc ? null : targeted_quc));
+
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: scrollY })
+    })
+  }
   return (
     <div className=''>
       <Carousel></Carousel>
@@ -134,15 +143,82 @@ const Home = () => {
           </div>
         </section>
         {/* Why Chose Us */}
-        <section className='px-[21%] mx-auto bg-[#fff] pt-15'>
-          <h2 className='text-center text-4xl font-bold text-[#032e5b] pb-18'>Why Choose Sigma Oil</h2>
-          <div id='quc' className='w-70% mx-auto cursor-pointer'>
-            <div id='question' className='flex'>
-              <h3 className='text-[#fff] flex items-center justify-between px-3 py-2 rounded-[3px] bg-[#002776] w-full'>Use Of Modern Technology <FaArrowRightLong /></h3>
+        <section className='px-[21%] mx-auto bg-[#fff] py-20'>
+          <h2 className='text-center text-4xl font-bold text-[#032e5b]  '>Why Choose Sigma Oil</h2>
+          <div className='flex flex-col gap-2 '>
+
+            <div className='border-b-1 border-[#032e5b] w-[15%] mx-auto pt-4  '></div>
+            {/* First */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer pt-15'>
+              <div onClick={() => handleToggleQuc('first')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'first' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Use Of Modern Technology <FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "first" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "first" ? "max-h-44 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>We use modern technology to process and refine products. It allows us to provide you with the right products.</p>
+              </div>
             </div>
-            <div id='cllups_ans' className='border-[#000] border-1 border-[#999696] py-3 pl-2 mt-[-1px]'>
-              <p className='text-[#404040]'>We use modern technology to process and refine products. It allows us to provide you with the right products.</p>
+            {/* Second */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer w-full'>
+              <div onClick={() => handleToggleQuc('Second')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'Second' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Available All Over Bangladesh <FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "Second" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "Second" ? "max-h-44 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>We serve entire Bangladesh to meet oil needs in every corner of the country.</p>
+              </div>
             </div>
+            {/* Thied */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer w-full'>
+              <div onClick={() => handleToggleQuc('Thied')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'Thied' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Quality Oil <FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "Thied" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "Thied" ? "max-h-44 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>Providing you with quality oil is our motto. Use our products and make your engines more efficient.</p>
+              </div>
+            </div>
+            {/* Forth */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer w-full'>
+              <div onClick={() => handleToggleQuc('Forth')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'Forth' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Competitive Price<FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "Forth" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "Forth" ? "max-h-44 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>We offer competitive prices without compromising the quality of products.</p>
+              </div>
+            </div>
+            {/* Fifth */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer w-full'>
+              <div onClick={() => handleToggleQuc('Fifth')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'Fifth' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Wide Variety of Products<FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "Fifth" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "Fifth" ? "max-h-44 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>We have a wide range of product categories so you can meet all your oil needs.</p>
+              </div>
+            </div>
+            {/* Sixth */}
+            <div id='quc' className='w-100% mx-auto cursor-pointer w-full'>
+              <div onClick={() => handleToggleQuc('Sixth')} id='question' className='flex'>
+                <h3 className={` flex items-center justify-between px-3 py-2 rounded-[3px] w-full  transition-all duration-1000 ease-initial ${toggleQuc === 'Sixth' ? " bg-[#002776] text-[#fff]" : " text-[#002776] bg-[#E0E0E0]"}`}>Smart Customer Service<FaArrowRightLong className={` transition-all duration-500 ease-linear ${toggleQuc === "Sixth" ? "rotate-90" : ""}`} /></h3>
+              </div>
+              <div id='cllups_ans' className={` border border-[#999696] pl-2 mt-[-4px] overflow-hidden
+  transition-all duration-500 ease-linear  ${toggleQuc === "Sixth" ? "max-h-100 " : "max-h-0"}`}>
+                <p className='text-[#404040] py-2'>Smart customer service to meet your requirements as a fuel station. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Catalog */}
+        <section className=' bg-[#0027769d] w-full h-full'>
+          <div className='catalog felx flex-col pb-10'>
+            <div className='py-10'>
+              <h2 className='text-3xl font-bold pb-2'>Get the Full Catalogs</h2>
+              <p>Download our Product Catalogue, Corporate Profile, Technical Guide Book and Other Product Related Documents.</p>
+            </div>
+            <button className='bg-[#1A88F8] py-2  px-3 font-bold flex gap-1 items-center rounded-[2px] cursor-pointer mx-auto'><FaDownload />
+              DOWNLOAD NOW</button>
           </div>
         </section>
       </main>

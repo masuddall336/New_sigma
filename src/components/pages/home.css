@@ -145,6 +145,31 @@
   background-image: url('../../../public//img//product_bg.jpg');
 }
 
+.catalog {
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 40px 0 50px;
+  color: #fff;
+  background:
+    url('../../../public/img/catalog.jpg') center/cover no-repeat;
+}
+.catalog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 41, 92, 0.5); /* overlay */
+  z-index: 0;
+}
+
+.catalog > * {
+  position: relative;
+  z-index: 1; /* make sure text is above overlay */
+}
 /* ================= RESPONSIVE ================= */
 
 /* TABLET */
