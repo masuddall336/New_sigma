@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./carousel.css";
-import slide1 from "../../public/slider/slider-1.webp"
+import slide1 from "../../public/slider/slider-1.png"
+import slide1Small from "../../public/slider/slider-1-sm.png"
 import slide2 from "../../public/slider/slider-2.jpg"
 import slide3 from "../../public/slider/slider-3.jpg"
 import slide4 from "../../public/slider/slider-4.jpg"
@@ -10,6 +11,7 @@ import drop from "../../public/slider/drop.jpg"
 const slides = [
   {
     image: slide1,
+    image_sm: slide1Small,
     title: "Sigma Oil Industries Limited",
     desc: "Go beyond your limit with our premium quality light-duty engine oil. A leading petroleum products manufacturing company the Country.",
     button: "KNOW MORE ABOUT US",
@@ -69,10 +71,15 @@ export default function Carousel() {
           if (index === current) className += " active";
           else if (index === prev) className += " prev";
           return (
-            <div 
+            <div
               key={index}
               className={className}
-              style={{ backgroundImage: `url(${slide.image})`, backgroundPosition:'left'}}
+              style={{
+                backgroundImage: `url(${window.innerWidth <= 768 ? slide.image_sm || slide.image
+                  : slide.image
+                  })`,
+                backgroundPosition: "left",
+              }}
             >
               <div className="carousel-content">
                 <h1>{slide.title}</h1>

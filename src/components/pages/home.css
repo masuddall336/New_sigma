@@ -155,6 +155,7 @@
   background:
     url('../../../public/img/catalog.jpg') center/cover no-repeat;
 }
+
 .catalog::before {
   content: "";
   position: absolute;
@@ -162,14 +163,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(16, 41, 92, 0.5); /* overlay */
+  background-color: rgba(16, 41, 92, 0.5);
+  /* overlay */
   z-index: 0;
 }
 
-.catalog > * {
+.catalog>* {
   position: relative;
-  z-index: 1; /* make sure text is above overlay */
+  z-index: 1;
+  /* make sure text is above overlay */
 }
+
 /* ================= RESPONSIVE ================= */
 
 /* TABLET */
@@ -287,6 +291,11 @@
   #top_since h1 {
     font-size: 25px;
     margin-top: 10px;
+  }
+
+  .bg_img {
+    background-image: url('../../../public/img/tank_bg.jpg');
+
   }
 }
 
