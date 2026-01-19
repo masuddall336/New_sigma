@@ -4,7 +4,8 @@
     border-radius: 2px;
     color: black;
 }
-#nav{
+
+#nav {
     z-index: 11;
 }
 
@@ -30,7 +31,7 @@
 #gear_transmission:hover #gear_sub,
 #specialized:hover #specialized_sub,
 #corporate:hover #corporate_sub {
-     z-index: 11;
+    z-index: 11;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -155,6 +156,25 @@
         opacity 0.35s ease
 }
 
+.motorcycle:hover .motorcycle_sub {
+    display: block;
+}
+.three-wheeler:hover .threewheeler_sub {
+    display: block;
+}
+.passenger_car:hover .passengercar_sub {
+    display: block;
+}
+.light_duty:hover .lightduty_sub {
+    display: block;
+}
+.heavy_duty:hover .heavyduty_sub {
+    display: block;
+}
+.industrial_soil:hover .industrial_soil_sub{
+    display: block;
+}
+
 
 /* Responsive nav */
 .responsive_ul li {
@@ -162,11 +182,13 @@
     border-top: 1px solid #00060c;
     border-bottom: 1px solid #05458a;
 }
-#top_arrow svg{
-color: #0A1D31;
-/* color: #fff; */
-font-size:larger;
+
+#top_arrow svg {
+    color: #0A1D31;
+    /* color: #fff; */
+    font-size: larger;
 }
+
 .responsive_ul li:first-child {
     padding: 5% 3%;
     border-top: none

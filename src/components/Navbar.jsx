@@ -189,24 +189,24 @@ const Navbar = () => {
                                 }
                             </div>
                         </li>
-                         <div>
-                                {
-                                    value === "Corporate" ? <ul id="" className="z-[100%] bg-[#0A1D31] w-[100%]">
-                                        <li className="relative">Corporate Profile
-                                            <div id="top_arrow" className="absolute top-[-12px]">
-                                                <TiArrowSortedUp />
-                                            </div>
-                                        </li>
-                                        <li>Management Team</li>
-                                        <li>Awards & Affiliation</li>
-                                        <li>Career Opportunity</li>
-                                        <li>Hours & Location</li>
-                                        <li>Mission</li>
-                                        <li>Blog</li>
-                                        <li>Contact Us</li>
-                                    </ul> : ""
-                                }
-                            </div>
+                        <div>
+                            {
+                                value === "Corporate" ? <ul id="" className="z-[100%] bg-[#0A1D31] w-[100%]">
+                                    <li className="relative">Corporate Profile
+                                        <div id="top_arrow" className="absolute top-[-12px]">
+                                            <TiArrowSortedUp />
+                                        </div>
+                                    </li>
+                                    <li>Management Team</li>
+                                    <li>Awards & Affiliation</li>
+                                    <li>Career Opportunity</li>
+                                    <li>Hours & Location</li>
+                                    <li>Mission</li>
+                                    <li>Blog</li>
+                                    <li>Contact Us</li>
+                                </ul> : ""
+                            }
+                        </div>
                     </ul>
                 </div>
 
@@ -222,20 +222,59 @@ const Navbar = () => {
 
                                 <ul id="" className="automotive_sub absolute  bg-[#FF6319] text-[#fff] p-[2%] w-[250%]">
                                     <TiArrowSortedUp className="top_arrow absolute top-[-11.5%] left-[29%] text-[#FF6319] text-4xl" />
-                                    <li className="">Motorcycle</li>
-                                    <li>Three Wheeler</li>
-                                    <li>Passenger Car</li>
-                                    <li>Light Duty</li>
-                                    <li>Heavy Duty</li>
+                                    <li className="relative motorcycle">Motorcycle
+                                        <ul className="motorcycle_sub absolute w-[100%] left-[100%] text-[#fff] top-[-5%] pt-[2px] bg-[#FF6319] hidden p-[0.5%]">
+                                            <li>Sigma</li>
+                                            <li>Soil</li>
+                                            <li>Naf Arab</li>
+                                        </ul>
+                                    </li>
+                                    <li className="relative three-wheeler">Three Wheeler
+                                        <ul className="threewheeler_sub absolute w-[100%] left-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                            <li>Sigma</li>
+                                            <li>Soil</li>
+                                        </ul>
+                                    </li>
+                                    <li className=" passenger_car relative ">Passenger Car
+                                        <ul className="passengercar_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                            <li>Sigma</li>
+                                            <li>Soil</li>
+                                        </ul>
+                                    </li>
+                                    <li className="light_duty relative">Light Duty
+                                        <ul className="lightduty_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                            <li>Soil</li>
+                                            <li>Sigma</li>
+                                        </ul>
+                                    </li>
+                                    <li className="heavy_duty relative">Heavy Duty
+                                        <ul className="heavyduty_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                            <li>Soil</li>
+                                            <li>Sigma</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                                 <MdKeyboardArrowDown className="text-xl" />
                             </li>
                         </NavLink>
                         <NavLink className="flex items-center" >
                             <li id="industrial" className="flex relative py-[35%] px-1">Industrial
-                                <ul id="industrial_sub" className="absolute bg-[#FF6319] text-[#fff] p-[2%] w-[250%] top-[100%] left-0">
-                                    <TiArrowSortedUp className=" industirall_top_arrow absolute text-[#FF6319] top-[-28%] left-[26%] opacity-0 text-4xl" />
-                                    <li>Soil</li>
+                                <ul id="industrial_sub" className="absolute bg-[#FF6319] text-[#fff] p-[2%] pt-[3%] w-[250%] top-[100%] left-0">
+                                    <TiArrowSortedUp className=" industirall_top_arrow absolute text-[#FF6319] top-[-27%] left-[26%] opacity-0 text-4xl" />
+                                    <li className="industrial_soil relative">Soil
+                                        <ul className="industrial_soil_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>GGO 626</li>
+                                            <li>GGo-727</li>
+                                            <li>HOH Series</li>
+                                            <li>Hyraulic Oil</li>
+                                            <li>HCO</li>
+                                            <li>Hydro Compressor Oil</li>
+                                            <li>T & C</li>
+                                            <li>Industrial Gear Oil</li>
+                                            <li>Heat Transfer Oil</li>
+                                            <li>Ornate Do-1000</li>
+                                        </ul>
+                                    </li>
                                     <li>Sigma</li>
                                 </ul>
                                 <MdKeyboardArrowDown className="text-xl industrial_top_arrow" />
