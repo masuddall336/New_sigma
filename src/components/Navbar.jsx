@@ -64,13 +64,15 @@ const Navbar = () => {
                     <div className="border-b-1 border-[#4c5f8c] pt-7 w-[95%] mx-auto"></div>
                     <ul className="responsive_ul relative">
                         <li className="h-10"></li>
-                        <li className={`flex  justify-between items-center relative  ${value === "Automotive" ? "" : ""}`}>Automotive
-                            <div onClick={() => handle_sub_menu('Automotive')} >
-                                {
-                                    value === "Automotive" ? <TiMinus /> : <FaPlus />
-                                }
-                            </div>
-                        </li>
+                        <NavLink to='/automotive'>
+                            <li className={`flex  justify-between items-center relative  ${value === "Automotive" ? "" : ""}`}>Automotive
+                                <div onClick={() => handle_sub_menu('Automotive')} >
+                                    {
+                                        value === "Automotive" ? <TiMinus /> : <FaPlus />
+                                    }
+                                </div>
+                            </li>
+                        </NavLink>
                         <div>
                             {
                                 value === "Automotive" ? <ul id="" className='z-10  bg-[#0A1D31]'>
@@ -472,18 +474,19 @@ const Navbar = () => {
                 </NavLink>
                 <nav className=" pr-2 lg:flex-1">
                     <ul id="main_nav" className="flex text-sm justify-end">
-                        <NavLink className="flex items-center" >
-                            <li id="automotive" className="relative py-[29%] px-1 flex">Automotive
-
+                        <NavLink to='automotive' className="flex items-center" >
+                            <li id="automotive" className="relative flex items-center py-[29%] px-1">Automotive
                                 <ul id="" className="automotive_sub absolute  bg-[#FF6319] text-[#fff] p-[2%] w-[250%]">
                                     <TiArrowSortedUp className="top_arrow absolute top-[-11.5%] left-[29%] text-[#FF6319] text-4xl" />
-                                    <li className="relative motorcycle">Motorcycle
-                                        <ul className="motorcycle_sub absolute w-[100%] left-[100%] text-[#fff] top-[-5%] pt-[2px] bg-[#FF6319] hidden p-[0.5%]">
-                                            <li>Sigma</li>
-                                            <li>Soil</li>
-                                            <li>Naf Arab</li>
-                                        </ul>
-                                    </li>
+                                    <NavLink to="/automotive/motorcycle">
+                                        <li className="relative motorcycle">Motorcycle
+                                            <ul className="motorcycle_sub absolute w-[100%] left-[100%] text-[#fff] top-[-5%] pt-[2px] bg-[#FF6319] hidden p-[0.5%]">
+                                                <li>Sigma</li>
+                                                <li>Soil</li>
+                                                <li>Naf Arab</li>
+                                            </ul>
+                                        </li>
+                                    </NavLink>
                                     <li className="relative three-wheeler">Three Wheeler
                                         <ul className="threewheeler_sub absolute w-[100%] left-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
                                             <li>Sigma</li>

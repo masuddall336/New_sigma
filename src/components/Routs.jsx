@@ -4,6 +4,7 @@ import {
 import Root from "./Root";
 import Home from "./pages/Home";
 import AboutUs from "./pages/about_us/AboutUs";
+import Automotive from "./pages/automotive/Automotive";
 
 let router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ let router = createBrowserRouter([
             {
                 path: 'about-us',
                 Component: AboutUs
+            },
+            {
+                path: 'automotive',
+                Component: Automotive
             }
         ]
     },
