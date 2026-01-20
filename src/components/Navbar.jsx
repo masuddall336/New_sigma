@@ -66,7 +66,11 @@ const Navbar = () => {
                         <li className="h-10"></li>
                         <NavLink to='/automotive'>
                             <li className={`flex  justify-between items-center relative  ${value === "Automotive" ? "" : ""}`}>Automotive
-                                <div onClick={() => handle_sub_menu('Automotive')} >
+                                <div onClick={(e) => {
+                                    e.preventDefault();     // stops NavLink navigation
+                                    e.stopPropagation();    // stops event bubbling
+                                    handle_sub_menu('Automotive');
+                                }} >
                                     {
                                         value === "Automotive" ? <TiMinus /> : <FaPlus />
                                     }
@@ -474,7 +478,7 @@ const Navbar = () => {
                 </NavLink>
                 <nav className=" pr-2 lg:flex-1">
                     <ul id="main_nav" className="flex text-sm justify-end">
-                        <NavLink to='automotive' className="flex items-center" >
+                        <NavLink to='/automotive' className="flex items-center" >
                             <li id="automotive" className="relative flex items-center py-[29%] px-1">Automotive
                                 <ul id="" className="automotive_sub absolute  bg-[#FF6319] text-[#fff] p-[2%] w-[250%]">
                                     <TiArrowSortedUp className="top_arrow absolute top-[-11.5%] left-[29%] text-[#FF6319] text-4xl" />
