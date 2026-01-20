@@ -7,6 +7,7 @@ import slide3 from "../../public/slider/slider-3.jpg"
 import slide4 from "../../public/slider/slider-4.jpg"
 import slide5 from "../../public/slider/slider-5.jpg"
 import drop from "../../public/slider/drop.jpg"
+import { NavLink } from "react-router";
 
 const slides = [
   {
@@ -15,6 +16,7 @@ const slides = [
     title: "Sigma Oil Industries Limited",
     desc: "Go beyond your limit with our premium quality light-duty engine oil. A leading petroleum products manufacturing company the Country.",
     button: "KNOW MORE ABOUT US",
+    route_name: "about-us"
   },
   {
     image: slide2,
@@ -84,7 +86,7 @@ export default function Carousel() {
               <div className="carousel-content">
                 <h1>{slide.title}</h1>
                 <p>{slide.desc}</p>
-                <button>{slide.button}</button>
+                <NavLink to={slide.route_name}><button>{slide.button}</button></NavLink>
               </div>
             </div>
           );

@@ -3,6 +3,7 @@ import {
 } from "react-router";
 import Root from "./Root";
 import Home from "./pages/Home";
+import AboutUs from "./pages/about_us/AboutUs";
 
 let router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ let router = createBrowserRouter([
                 index: true,
                 Component: Home
 
+            },
+            {
+                path: 'about-us',
+                Component: AboutUs
             }
         ]
     },
