@@ -20,10 +20,10 @@ const Footer = () => {
             <div className="flex gap-2 py-5 items-center">
               <h3 className="text-xl mr-1">Follow us:</h3>
               <div id="social_icons" className="flex items-center gap-5">
-                <a className="" href=""><FaFacebookF /></a>
-                <a href=""><CiLinkedin /></a>
-                <a href=""><FaSquareInstagram /></a>
-                <a href=""> <FaYoutube /></a>
+                <a className="" href="https://www.facebook.com/sigmaoilindustriesltd/" target="_blank"><FaFacebookF /></a>
+                <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHBC_7axXz5vQAAAZvXxePIWh2Lk5Wh_GWR16MmWrGgP5sUhblftQG9GZxNSrvESgOaebKWBp3QaJW-olrsRrwhLAphhFqdA53KvuOFbDQXI9f1nAeNCSOebUIlcKHGvuvNLE4=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsigma-oil-industries-ltd%2F" target="_blank"><CiLinkedin /></a>
+                <a href="https://www.instagram.com/sigmaoilindustriesltd/" target="_blank"><FaSquareInstagram /></a>
+                <a href="https://www.youtube.com/@soil_bd" target="_blank"> <FaYoutube /></a>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div id="bottom" className="flex flex-wrap gap-5 xl:gap-40 items-center justify-center border-t-1  py-1 xl:py-5 w-[95%] mx-auto">
+        <div id="bottom" className="flex flex-wrap gap-5 xl:gap-40 items-center justify-center border-t-1  pt-5 xl:py-5 w-[95%] mx-auto">
           {/* Left side */}
           <div>
             <ul id="footer_last_ul" className="flex flex-wrap justify-center gap-5">

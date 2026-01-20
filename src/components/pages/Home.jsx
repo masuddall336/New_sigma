@@ -143,7 +143,7 @@ const Home = () => {
           </div>
         </section>
         {/* Why Chose Us */}
-        <section className='px-[21%] mx-auto bg-[#fff] py-20'>
+        <section className='px-2 md:px-[21%] mx-auto bg-[#fff] py-20'>
           <h2 className='text-center text-4xl font-bold text-[#032e5b]  '>Why Choose Sigma Oil</h2>
           <div className='flex flex-col gap-2 '>
 

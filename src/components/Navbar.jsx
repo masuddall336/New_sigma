@@ -13,8 +13,12 @@ import { NavLink } from "react-router";
 import { useRef, useState } from "react";
 const Navbar = () => {
     const [value, setValue] = useState(null);
+    const [valueSub, setValueSub] = useState(null);
     const handle_sub_menu = (menu) => {
         setValue(prev => (prev === menu ? null : menu));
+    };
+    const handle_sub_menu_sub = (menu) => {
+        setValueSub(prev => (prev === menu ? null : menu));
     };
     let [openHide, setOpenHight] = useState(false);
     const touchStartX = useRef(0);
@@ -69,20 +73,107 @@ const Navbar = () => {
                         </li>
                         <div>
                             {
-                                value === "Automotive" ? <ul id="" className={`z-10  bg-[#0A1D31] 
-         ${value === "Automotive" ? "" : ""}`}>
-                                    <li className="relative">Motorcycle
-                                        <div id="top_arrow" className="absolute top-[-12px] ">
-                                            <TiArrowSortedUp />
+                                value === "Automotive" ? <ul id="" className='z-10  bg-[#0A1D31]'>
+                                    <li className="relative flex justify-between items-center" >Motorcycle
+                                        <div onClick={() => handle_sub_menu_sub('motorcycle')} >
+                                            {
+                                                valueSub === "motorcycle" ? <TiMinus /> : <FaPlus />
+                                            }
                                         </div>
                                     </li>
-                                    <li>Three Wheeler</li>
-                                    <li>Passenger Car</li>
-                                    <li>Light Duty</li>
-                                    <li className="">Heavy Duty</li>
+                                    <div>
+                                        {
+                                            valueSub === "motorcycle" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Soil
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Sigma</li>
+                                                <li>Naf Arab</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative flex justify-between items-center" >Three Wheeler
+                                        <div onClick={() => handle_sub_menu_sub('threeWheeler')} >
+                                            {
+                                                valueSub === "threeWheeler" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "threeWheeler" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Soil
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Sigma</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative flex justify-between items-center" >Passenger Car
+                                        <div onClick={() => handle_sub_menu_sub('PassengerCar')} >
+                                            {
+                                                valueSub === "PassengerCar" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "PassengerCar" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Soil
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Sigma</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative flex justify-between items-center" >Light Duty
+                                        <div onClick={() => handle_sub_menu_sub('lightDuty')} >
+                                            {
+                                                valueSub === "lightDuty" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "lightDuty" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Sigma
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Soil</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative flex justify-between items-center" >Heavy Duty
+                                        <div onClick={() => handle_sub_menu_sub('HeavyDuty')} >
+                                            {
+                                                valueSub === "HeavyDuty" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "HeavyDuty" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Sigma
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Soil</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                 </ul> : ""
                             }
                         </div>
+                        {/* second menu */}
                         <li className={`flex justify-between items-center transition-all duration-300 relative  ${value === "Automotive" ? "" : ""}`}>Industrial
                             <div onClick={() => handle_sub_menu('Industrial')} >
                                 {
@@ -94,12 +185,57 @@ const Navbar = () => {
                             {
                                 value === "Industrial" ? <ul id="" className=" z-10 bg-[#0A1D31] w-[100%]">
 
-                                    <li className="relative">Soil
-                                        <div id="top_arrow" className="absolute top-[-12px]">
-                                            <TiArrowSortedUp />
+                                    <li className="relative relative flex justify-between items-center">Soil
+                                        <div onClick={() => handle_sub_menu_sub('industrialSoil')} >
+                                            {
+                                                valueSub === "industrialSoil" ? <TiMinus /> : <FaPlus />
+                                            }
                                         </div>
                                     </li>
-                                    <li>Sigma</li>
+                                    <div>
+                                        {
+                                            valueSub === "industrialSoil" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">GGO 626
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>GGo-727</li>
+                                                <li>HOH Series</li>
+                                                <li>Hyraulic Oil</li>
+                                                <li>HCO</li>
+                                                <li>Hydro Compressor Oil</li>
+                                                <li>T & C</li>
+                                                <li>Industrial Gear Oil</li>
+                                                <li>Heat Transfer Oil</li>
+                                                <li>Ornate Do-1000</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative relative flex justify-between items-center">Sigma
+                                        <div onClick={() => handle_sub_menu_sub('industrialSigma')} >
+                                            {
+                                                valueSub === "industrialSigma" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "industrialSigma" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Sigma Super Fleet
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>HOA Series</li>
+                                                <li>CO Series</li>
+                                                <li>Compressor Oil</li>
+                                                <li>Sigma Machine Oil</li>
+                                                <li>Industrial Gear Oil</li>
+                                                <li>Hydraulic Oil AW</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                 </ul> : ""
                             }
                         </div>
@@ -119,7 +255,24 @@ const Navbar = () => {
                                         </div>
                                     </li>
                                     <li>Cylinder Oil</li>
-                                    <li>Sigma</li>
+                                    <li className="relative relative flex justify-between items-center">Sigma
+                                        <div onClick={() => handle_sub_menu_sub('marine_sigma')} >
+                                            {
+                                                valueSub === "marine_sigma" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "marine_sigma" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Fleet, SAE-30, 40, 50, API: CF/SF
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                 </ul> : ""
                             }
                         </div>
@@ -133,13 +286,63 @@ const Navbar = () => {
                         <div>
                             {
                                 value === "Agriculture" ? <ul id="" className=" bg-[#0A1D31] relative w-[100%]">
-                                    <li>Sigma
-                                        <div id="top_arrow" className="absolute top-[-12px]">
-                                            <TiArrowSortedUp />
+                                    <li className="relative relative flex justify-between items-center">Sigma
+                                        <div onClick={() => handle_sub_menu_sub('agriculture_sigma')} >
+                                            {
+                                                valueSub === "agriculture_sigma" ? <TiMinus /> : <FaPlus />
+                                            }
                                         </div>
                                     </li>
-                                    <li>Naf Arab</li>
-                                    <li>Soil</li>
+                                    <div>
+                                        {
+                                            valueSub === "agriculture_sigma" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Power HD
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Turbo Super 2020</li>
+                                                <li>Active</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative relative flex justify-between items-center">Naf Arab
+                                        <div onClick={() => handle_sub_menu_sub('agriculture_NafArab')} >
+                                            {
+                                                valueSub === "agriculture_NafArab" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "agriculture_NafArab" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Classic
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative relative flex justify-between items-center">Soil
+                                        <div onClick={() => handle_sub_menu_sub('agriculture_soil')} >
+                                            {
+                                                valueSub === "agriculture_soil" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "agriculture_soil" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">Ornate Max
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Ornate</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                 </ul> : ""
                             }
                         </div>
@@ -153,12 +356,49 @@ const Navbar = () => {
                         <div>
                             {
                                 value === "Gear" ? <ul id="" className="z-10 bg-[#0A1D31] w-[100%]">
-                                    <li className="relative">Soil
-                                        <div id="top_arrow" className="absolute top-[-12px]">
-                                            <TiArrowSortedUp />
+                                    <li className="relative relative flex justify-between items-center">Soil
+                                        <div onClick={() => handle_sub_menu_sub('gear_soil')} >
+                                            {
+                                                valueSub === "gear_soil" ? <TiMinus /> : <FaPlus />
+                                            }
                                         </div>
                                     </li>
-                                    <li>Sigma</li>
+                                    <div>
+                                        {
+                                            valueSub === "gear_soil" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">ATF DEX-IIIH
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>MP Gear</li>
+                                                <li>Auto Gear DEX-III H</li>
+                                                <li>Multipurpose Gear Oil</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
+                                    <li className="relative relative flex justify-between items-center">Sigma
+                                        <div onClick={() => handle_sub_menu_sub('gear_sigma')} >
+                                            {
+                                                valueSub === "gear_sigma" ? <TiMinus /> : <FaPlus />
+                                            }
+                                        </div>
+                                    </li>
+                                    <div>
+                                        {
+                                            valueSub === "gear_sigma" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">EP Gear Oil
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>ATF Type-A</li>
+                                                <li>ATF DEX-III</li>
+                                                <li>Super Gear Oil</li>
+                                                <li>Auto Gear Type-A</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                     <li>Naf Arab</li>
                                 </ul> : ""
                             }
@@ -192,11 +432,26 @@ const Navbar = () => {
                         <div>
                             {
                                 value === "Corporate" ? <ul id="" className="z-[100%] bg-[#0A1D31] w-[100%]">
-                                    <li className="relative">Corporate Profile
-                                        <div id="top_arrow" className="absolute top-[-12px]">
-                                            <TiArrowSortedUp />
+                                    <li className="relative relative flex justify-between items-center">Corporate Profile
+                                        <div onClick={() => handle_sub_menu_sub('corporateProfile')} >
+                                            {
+                                                valueSub === "corporateProfile" ? <TiMinus /> : <FaPlus />
+                                            }
                                         </div>
                                     </li>
+                                    <div>
+                                        {
+                                            valueSub === "corporateProfile" ? <ul className="bg-[#245a94]">
+                                                <li className="relative">History
+                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                        <TiArrowSortedUp className='' />
+                                                    </div>
+                                                </li>
+                                                <li>Commitment</li>
+                                                <li>OUr Philosophy</li>
+                                            </ul> : ""
+                                        }
+                                    </div>
                                     <li>Management Team</li>
                                     <li>Awards & Affiliation</li>
                                     <li>Career Opportunity</li>
@@ -275,7 +530,17 @@ const Navbar = () => {
                                             <li>Ornate Do-1000</li>
                                         </ul>
                                     </li>
-                                    <li>Sigma</li>
+                                    <li className="industrial_sigma relative">Sigma
+                                        <ul className="industrial_sigma_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>Sigma Super Fleet</li>
+                                            <li>HOA Series</li>
+                                            <li>CO Series</li>
+                                            <li>Compressor Oil</li>
+                                            <li>Sigma Machine Oil</li>
+                                            <li>Industrial Gear Oil</li>
+                                            <li>Hydraulic Oil AW</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                                 <MdKeyboardArrowDown className="text-xl industrial_top_arrow" />
                             </li>
@@ -286,7 +551,11 @@ const Navbar = () => {
                                     <TiArrowSortedUp className=" marin_top_arrow absolute top-[-19%] left-[20%] text-[#FF6319] opacity-0 text-4xl" />
                                     <li>Merin Engin Oil</li>
                                     <li>Cylinder Oil</li>
-                                    <li>Sigma</li>
+                                    <li className="marine_sigma relative">Sigma
+                                        <ul className="marine_sigma_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>Fleet, SAE-30, 40, 50, API: CF/SF</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                                 <MdKeyboardArrowDown className="text-xl " />
                             </li>
@@ -295,9 +564,24 @@ const Navbar = () => {
                             <li id="Agriculture" className="flex relative py-[31%] px-1">Agriculture
                                 <ul id="agriculture_sub" className=" absolute bg-[#FF6319] text-[#fff] p-[2%] w-[250%] top-[100%] left-0">
                                     <TiArrowSortedUp className=" agriculture_top_arrow absolute top-[-18%] opacity-0 left-[28%] text-[#FF6319]  text-4xl" />
-                                    <li>Sigma</li>
-                                    <li>Naf Arab</li>
-                                    <li>Soil</li>
+                                    <li className="agriculture_sigma relative">Sigma
+                                        <ul className="agriculture_sigma_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>Power HD</li>
+                                            <li>Turbo Super 2020</li>
+                                            <li>Active</li>
+                                        </ul>
+                                    </li>
+                                    <li className="agriculture_nafarab relative">Naf Arab
+                                        <ul className="agriculture_nafarab_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>Classic</li>
+                                        </ul>
+                                    </li>
+                                    <li className="agriculture_soil relative">Soil
+                                        <ul className="agriculture_soil_sub absolute right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] bg-[#FF6319] text-[#fff] hidden">
+                                            <li>Ornate Max</li>
+                                            <li>Ornate</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                                 <MdKeyboardArrowDown className="text-xl " />
                             </li>
@@ -306,8 +590,23 @@ const Navbar = () => {
                             <li id="gear_transmission" className="flex relative py-[19%] p-1">Gear & Transmission
                                 <ul id="gear_sub" className=" absolute bg-[#FF6319] text-[#fff] pl-[1%] pr-[1%] pt-[1.5%] pb-[1%] w-[150%] top-[100%] left-0">
                                     <TiArrowSortedUp className=" gear_top_arrow absolute  left-[47%] top-[-18.5%] text-[#FF6319] opacity-0  text-4xl" />
-                                    <li>Soil</li>
-                                    <li>Sigma</li>
+                                    <li className="gear_soil relative">Soil
+                                        <ul className="gear_soil_sub absolute bg-[#FF6319] right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] text-[#fff] hidden">
+                                            <li>ATF DEX-IIIH</li>
+                                            <li>MP Gear</li>
+                                            <li>Auto Gear DEX-III H</li>
+                                            <li>Multipurpose Gear Oil</li>
+                                        </ul>
+                                    </li>
+                                    <li className="gear_sigma relative">Sigma
+                                        <ul className="gear_sigma_sub absolute bg-[#FF6319] right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] text-[#fff] hidden">
+                                            <li>EP Gear Oil</li>
+                                            <li>ATF Type-A</li>
+                                            <li>ATF DEX-III</li>
+                                            <li>Super Gear Oil</li>
+                                            <li>Auto Gear Type-A</li>
+                                        </ul>
+                                    </li>
                                     <li>Naf Arab</li>
                                 </ul>
                             </li>
@@ -327,7 +626,13 @@ const Navbar = () => {
                             <li id="corporate" className="flex px-1 py-[33%] relative">Corporate
                                 <ul id="corporate_sub" className="absolute text-[#fff] p-[1%] pt-[2%] bg-[#FF6319] top-[100%] right-0 w-[250%]">
                                     <TiArrowSortedUp className=" corporate_top_arrow absolute left-[57%] top-[-7.2%] text-[#FF6319]  text-4xl" />
-                                    <li>Corporate Profile</li>
+                                    <li className="corporate_corporateprofile relative">Corporate Profile
+                                        <ul className="corporate_corporateprofile_sub absolute bg-[#FF6319] right-[100%] top-[-4%] w-[100%] pt-[0.5%] p-[1%] text-[#fff] hidden">
+                                            <li>History</li>
+                                            <li>Commitment</li>
+                                            <li>OUr Philosophy</li>
+                                        </ul>
+                                    </li>
                                     <li>Management Team</li>
                                     <li>Awards & Affiliation</li>
                                     <li>Career Opportunity</li>
@@ -353,8 +658,8 @@ const Navbar = () => {
                         <a href="tel:+88-01700-760430" aria-label="Phone Number"> <span>+88-01700-760430</span></a>
                     </div>
                     <div id="social_icons" className="flex flex-col gap-3">
-                        <a href="https://www.youtube.com/@soil_bd" target="_black"><FaFacebookF className="social_icons " /></a>
-                        <a href="https://www.facebook.com/sigmaoilindustriesltd/" target="_blank"> <FaYoutube className="social_icons  " /></a>
+                        <a href="https://www.facebook.com/sigmaoilindustriesltd/" target="_black"><FaFacebookF className="social_icons " /></a>
+                        <a href="https://www.youtube.com/@soil_bd" target="_blank"> <FaYoutube className="social_icons  " /></a>
 
                     </div>
                 </div>
