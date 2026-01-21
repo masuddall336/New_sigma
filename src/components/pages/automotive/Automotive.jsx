@@ -37,7 +37,7 @@ const Automotive = () => {
                     </section>
                 </div>
                 {/* path */}
-                <section className='bg-[#fff] border-b-1 pl-5 sm:pl-0 border-[#00000059]'>
+                <section className='bg-[#fff] border-b-1 pl-10 sm:pl-0 border-[#00000059]'>
                     <div id='navigation_path' className='max-w-[1080px] mx-auto bg-[#fff] text-[#000] text-sm  py-4'>
                         <ul className='flex gap-3 items-center'>
                             <div className='flex gap-1 items-center'>

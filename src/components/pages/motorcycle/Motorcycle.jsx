@@ -35,7 +35,7 @@ const Motorcycle = () => {
                         backgroundPosition: 'center',    // center the image
                     }}>
                         <div className='absolute left-[10%] top-[30%] sm:top-[30%] md:top-[38%] lg:top-[35%] w-[90%] md:w-[70%]'>
-                            <h1 className=' py-[3px] pl-3 text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] bg-no-repeat bg-[linear-gradient(93deg,rgba(0,39,118,.67)_0%,#fff0_50%)]  top-[36%] left-[10%]'>Automotive</h1>
+                            <h1 className=' py-[3px] pl-3 text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] bg-no-repeat bg-[linear-gradient(93deg,rgba(0,39,118,.67)_0%,#fff0_50%)]  top-[36%] left-[10%]'>Motorcycle</h1>
                         </div>
                     </section>
                 </div>
@@ -55,7 +55,7 @@ const Motorcycle = () => {
                     </div>
                 </section>
                 {/* Premium Quality */}
-                <section className='bg-[#ececec] pl-5 sm:pl-0  py-[2%]'>
+                <section className='bg-[#ececec]    py-[2%]'>
                     <div id='navigation_path' className='max-w-[1080px] px-5 md:px-0 mx-auto   py-4 flex flex-col items-center'>
                         <img className='w-[2%]' src={drop} alt="" />
                         <span className='text-[#ad0000] italic font-bold text-center block' >Premium Quality</span>

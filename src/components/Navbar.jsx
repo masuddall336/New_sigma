@@ -17,8 +17,10 @@ const Navbar = () => {
     const handle_sub_menu = (menu) => {
         setValue(prev => (prev === menu ? null : menu));
     };
-    const handle_sub_menu_sub = (menu) => {
+    const handle_sub_menu_sub = (menu, e) => {
         setValueSub(prev => (prev === menu ? null : menu));
+        e.preventDefault();     // stops NavLink navigation
+        e.stopPropagation();    // stops event bubbling
     };
     let [openHide, setOpenHight] = useState(false);
     const touchStartX = useRef(0);
@@ -82,7 +84,7 @@ const Navbar = () => {
                                 value === "Automotive" ? <ul id="" className='z-10  bg-[#0A1D31]'>
                                     <NavLink to='/automotive/motorcycle'>
                                         <li className="relative flex justify-between items-center" >Motorcycle
-                                            <div onClick={() => handle_sub_menu_sub('motorcycle')} >
+                                            <div onClick={(e) => handle_sub_menu_sub('motorcycle', e)} >
                                                 {
                                                     valueSub === "motorcycle" ? <TiMinus /> : <FaPlus />
                                                 }
@@ -92,13 +94,15 @@ const Navbar = () => {
                                     <div>
                                         {
                                             valueSub === "motorcycle" ? <ul className="bg-[#245a94]">
-                                                <li className="relative">Soil
-                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
-                                                        <TiArrowSortedUp className='' />
-                                                    </div>
-                                                </li>
-                                                <li>Sigma</li>
-                                                <li>Naf Arab</li>
+                                                <NavLink to='/automotive/motorcycle/soil'>
+                                                    <li className="relative">Soil
+                                                        <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                            <TiArrowSortedUp className='' />
+                                                        </div>
+                                                    </li>
+                                                </NavLink>
+                                                <NavLink to='/automotive/motorcycle/sigma'><li>Sigma</li></NavLink>
+                                                <NavLink to='/automotive/motorcycle/naf-arab'><li>Naf Arab</li></NavLink>
                                             </ul> : ""
                                         }
                                     </div>
@@ -487,9 +491,9 @@ const Navbar = () => {
                                     <NavLink to="/automotive/motorcycle">
                                         <li className="relative motorcycle">Motorcycle
                                             <ul className="motorcycle_sub absolute w-[100%] left-[100%] text-[#fff] top-[-5%] pt-[2px] bg-[#FF6319] hidden p-[0.5%]">
-                                                <li>Sigma</li>
-                                                <li>Soil</li>
-                                                <li>Naf Arab</li>
+                                                <NavLink to='/automotive/motorcycle/soil'><li>Soil</li></NavLink>
+                                                <NavLink to='/automotive/motorcycle/sigma'><li>Sigma</li></NavLink>
+                                                <NavLink to='/automotive/motorcycle/naf-arab'><li >Naf Arab</li></NavLink>
                                             </ul>
                                         </li>
                                     </NavLink>
