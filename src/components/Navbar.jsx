@@ -80,13 +80,15 @@ const Navbar = () => {
                         <div>
                             {
                                 value === "Automotive" ? <ul id="" className='z-10  bg-[#0A1D31]'>
-                                    <li className="relative flex justify-between items-center" >Motorcycle
-                                        <div onClick={() => handle_sub_menu_sub('motorcycle')} >
-                                            {
-                                                valueSub === "motorcycle" ? <TiMinus /> : <FaPlus />
-                                            }
-                                        </div>
-                                    </li>
+                                    <NavLink to='/automotive/motorcycle'>
+                                        <li className="relative flex justify-between items-center" >Motorcycle
+                                            <div onClick={() => handle_sub_menu_sub('motorcycle')} >
+                                                {
+                                                    valueSub === "motorcycle" ? <TiMinus /> : <FaPlus />
+                                                }
+                                            </div>
+                                        </li>
+                                    </NavLink>
                                     <div>
                                         {
                                             valueSub === "motorcycle" ? <ul className="bg-[#245a94]">
@@ -478,7 +480,7 @@ const Navbar = () => {
                 </NavLink>
                 <nav className=" pr-2 lg:flex-1">
                     <ul id="main_nav" className="flex text-sm justify-end">
-                        <NavLink to='/automotive' className="flex items-center" >
+                        <NavLink to='/automotive' className="flex items-cresearch_and_developmententer" >
                             <li id="automotive" className="relative flex items-center py-[29%] px-1">Automotive
                                 <ul id="" className="automotive_sub absolute  bg-[#FF6319] text-[#fff] p-[2%] w-[250%]">
                                     <TiArrowSortedUp className="top_arrow absolute top-[-11.5%] left-[29%] text-[#FF6319] text-4xl" />

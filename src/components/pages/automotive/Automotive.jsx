@@ -38,7 +38,7 @@ const Automotive = () => {
                 </div>
                 {/* path */}
                 <section className='bg-[#fff] border-b-1 pl-5 sm:pl-0 border-[#00000059]'>
-                    <div id='navigation_path' className='max-w-[1315px] mx-auto bg-[#fff] text-[#000] text-sm  py-4'>
+                    <div id='navigation_path' className='max-w-[1080px] mx-auto bg-[#fff] text-[#000] text-sm  py-4'>
                         <ul className='flex gap-3 items-center'>
                             <div className='flex gap-1 items-center'>
                                 <IoHome />
@@ -50,7 +50,7 @@ const Automotive = () => {
                 </section>
                 {/* About Sigma Oil Industries Led. */}
                 <section className='bg-[#fff]  py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className='  max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='text-[#032e5b] text-3xl font-bold  '>
                             <h2>Best automotive Engine Oil in Bangladesh | Car lubricant oil</h2>
                         </div>
@@ -73,7 +73,7 @@ const Automotive = () => {
                 </section>
                 {/*Our range of Engine Oils in Bangladesh */}
                 <section className='bg-[#F5F5F5]  py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className='  max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='text-[#032e5b] text-3xl font-bold  '>
                             <h2>Our range of Engine Oils in Bangladesh</h2>
                         </div>
@@ -137,7 +137,7 @@ const Automotive = () => {
                 </section>
                 {/*Three-Wheeler Engine Oil*/}
                 <section className='bg-[#fff]  py-10'>
-                    <div className=' max-w-[1355px] px-5 mx-auto'>
+                    <div className=' max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='flex flex-col md:flex-row gap-8 items-center justify-between'>
                             <div id="right_about" className='flex-1'>
                                 <div >
@@ -197,7 +197,7 @@ const Automotive = () => {
                 </section>
                 {/*Three-Wheeler Engine Oil*/}
                 <section className='bg-[#F5F5F5]  py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className=' max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='flex flex-col flex-col-reverse md:flex-row gap-8 items-center justify-between'>
                             <div id="left_about" className='w-[12/12] md:w-6/12'>
                                 <img src={passenger_car_engine_oil} alt="" />
@@ -257,7 +257,7 @@ const Automotive = () => {
                 </section>
                 {/*Light-Duty Engine Oil*/}
                 <section className='bg-[#fff]  py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className='  max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='flex flex-col  md:flex-row gap-8 items-center justify-between'>
                             <div id="right_about" className='flex-1'>
                                 <div >
@@ -317,7 +317,7 @@ const Automotive = () => {
                 </section>
                 {/*Heavy-Duty Engine Oil*/}
                 <section className='bg-[#F5F5F5] py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className='  max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='flex flex-col flex-col-reverse md:flex-row gap-8 items-center justify-between'>
                             <div id="left_about" className='w-[12/12] md:w-6/12'>
                                 <img src={heavy_duty_engine_oil} alt="" />
@@ -371,7 +371,7 @@ const Automotive = () => {
                 </section>
                 {/*Why choose Sigma Oil Industries Ltd?*/}
                 <section className='bg-[#fff] py-10'>
-                    <div className='  max-w-[1355px] px-5 mx-auto'>
+                    <div className='  max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div className='flex flex-col  md:flex-row gap-8 items-center justify-between'>
                             <div id="right_about" className='flex-1'>
                                 <div >
@@ -441,7 +441,7 @@ const Automotive = () => {
                 </section>
                 {/* Trusted by mechanics, loved by drivers */}
                 <section className='bg-[#F5F5F5] py-10'>
-                    <div className='max-w-[1355px] px-5 mx-auto'>
+                    <div className='max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div>
                             <h2 className='text-[#032e5b] text-[1.5em] font-bold'>Why choose Sigma Oil Industries Ltd?</h2>
                             <p className='text-[#404040] pb-5 pt-2 '>Sigma Oil Industries Ltd is the go-to choice for garages, vehicle owners, and fleet managers across Bangladesh. Trust Sigma Oil Industries Ltd,  <a href="https://www.sigma-oil.com/" className='underline  hover:text-[#fd7e14] transition-all duration-400 text-[#006cdd]'  >the leading automotive engine oil supplier in Bangladesh.</a> We provide top-quality & high-performance lubricants that keep your engine running smoother and longer.</p>
@@ -457,7 +457,7 @@ const Automotive = () => {
                 </section>
                 {/* FAQs about Automotive Engine Oil */}
                 <section className='bg-[#fff] py-10'>
-                    <div className='max-w-[1355px] px-5 mx-auto'>
+                    <div className='max-w-[1080px] px-5 md:px-0 mx-auto'>
                         <div>
                             <h2 className='text-[#032e5b] text-[1.5em] font-bold'>FAQs about Automotive Engine Oil</h2>
                         </div>

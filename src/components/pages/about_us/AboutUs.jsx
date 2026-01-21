@@ -2,6 +2,7 @@ import React from 'react'
 import banner from '../../../../public/about-us/about-us.jpg'
 import sigma_oil_history from "../../../../public/about-us/sigma-oil-history.jpg"
 import quality_control from "../../../../public/about-us/quality-control.jpg"
+import research_and_development from "../../../../public/about-us/research-and-development.jpg"
 import technology from "../../../../public/about-us/technology.jpg"
 import raw_materials from "../../../../public/about-us/raw-materials.jpg"
 import certification from "../../../../public/about-us/sigma-oil-industries-limited-certification-lg.jpg"
@@ -142,7 +143,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                         <div id="left_about" className='w-[12/12] md:w-6/12'>
-                            <img src={raw_materials} alt="" />
+                            <img src={research_and_development} alt="" />
                         </div>
                     </div>
                 </div>

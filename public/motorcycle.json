@@ -1,0 +1,97 @@
+{
+  "engine_oil_your_motorcycle": [
+    {
+      "product_img": "../public/motorcycle/motorcycle-soil.jpg",
+      "product_name": "SOIL",
+      "product_description": "Sigma Oil Industries Limited manufactures SOIL branded <strong>Supreme – 4T, Supra – 4T, Super 4T, Zoom</strong>  motorcycle engine oil. Use our SOIL products to supercharge your bike and explore the power of quality oil.",
+      "product_button": "Take a Look at SOIL Super 4T ⤏",
+      "product_button_path": "https://example.com/products/wireless-bluetooth-headphones"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-sigma.jpg",
+      "product_name": "Sigma",
+      "product_description": "Sigma Oil Industries Limited produces <strong>Sigma Gold</strong> Multi-Grade Motorcycle Engine Oil. Use our brand Sigma Gold Engine oil to supercharge your bike and explore the power of engine performance.",
+      "product_button": "See Sigma Gold Multi-Grade Engine Oil ⤏",
+      "product_button_path": "https://example.com/products/smart-fitness-watch"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-naf-arab.jpg",
+      "product_name": "Naf Arab",
+      "product_description": "Sigma Oil Industries Limited manufactures Naf Arab 4T Plus Motorcycle Engine Oil. Use our <strong>Naf Arab 4T Plus</strong> to supercharge your bike performance and explore the beauty of quality oil.",
+      "product_button": "More About Naf Arab 4T Plus Oil ⤏",
+      "product_button_path": "https://example.com/products/portable-mini-projector"
+    }
+  ],
+  "soil_brand_motorcycle_oil": [
+    {
+      "product_img": "../public/motorcycle/motorcycle-supra-4T.jpg",
+      "product_name": "SOIL<strong> Supra 4T</strong>",
+      "product_description": "SOIL Supra 4T is a specially formulated super grade gasoline lubricant for all types of motorcycle enginee...",
+      "product_button": "Check Latest Price ⤏",
+      "product_button_path": "https://example.com/products/wireless-bluetooth-headphones"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-super-4T.jpg",
+      "product_name": "SOIL<strong> Super 4T</strong>",
+      "product_description": "SOIL Super 4T is a specially formulated super grade gasoline lubricant for all types of motorcycle enginee...",
+      "product_button": "Check Latest Price ⤏",
+      "product_button_path": "https://example.com/products/smart-fitness-watch"
+    },
+    {
+      "product_img": "../public/motorcycle/ultra-4t-1l.png",
+      "product_name": "SOIL<strong> ULTRA 4T</strong>",
+      "product_description": "ULTRA 4T is a newly introduced premium quality lube oil for 4-strokes motorcycles....",
+      "product_button": "Check Latest Price ⤏",
+      "product_button_path": "https://example.com/products/smart-fitness-watch"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-zoom.jpg",
+      "product_name": "SOIL<strong> Zoom</strong>",
+      "product_description": "Zoom is a specially formulated super grade gasoline lubricant for all types of motorcycle enginee...",
+      "product_button": "Check Latest Price ⤏",
+      "product_button_path": "https://example.com/products/smart-fitness-watch"
+    },
+    {
+      "product_img": "../public/motorcycle/supreme-4T-1L.jpg",
+      "product_name": "SOIL<strong> Supreme 4T</strong>",
+      "product_description": "Supreme 4T is a specially formulated super grade gasoline lubricant for all types of motorcycle enginee...",
+      "product_button": "Check Latest Price ⤏",
+      "product_button_path": "https://example.com/products/portable-mini-projector"
+    }
+  ],
+  "sigma_branded_oil_for_your_bike_Engine": [
+    {
+      "product_img": "../public/motorcycle/automotive-motorcycle-sigma-unique-4t.jpg",
+      "product_first_name": "Sigma",
+      "product_last_name": "Unique 4T",
+      "product_description": "UNIQUE 4T is a mineral base multi grade motorcycle engine oil uniting the latest developed technologies and advanced additives Package. By meeting the API SL/CF, JASO MA performance level...",
+      "product_button": "Check Latest Price⤏",
+      "product_button_path": "https://example.com/products/wireless-bluetooth-headphones"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-sigma.jpg",
+      "product_first_name": "Sigma",
+      "product_last_name": "Gold",
+      "product_description": "Gold is premium performance gas engine oil specially developed for vehicles running on CNG/LPG or dual fuels...",
+      "product_button": "Check Latest Price⤏",
+      "product_button_path": "https://example.com/products/smart-fitness-watch"
+    },
+    {
+      "product_img": "../public/motorcycle/motorcycle-sigma-power-1l.png",
+      "product_first_name": "Sigma",
+      "product_last_name": "Power",
+      "product_description": "Power is high performance multi-grade engine oil designed to use in gasoline automotive engines of passenger cars, commercial vehicles and 4-Stroke motorcycles...",
+      "product_button": "Check Latest Price⤏",
+      "product_button_path": "https://example.com/products/portable-mini-projector"
+    }
+  ],
+  "Naf_arab_branded_4t_plus_bike_engine_Oil": [
+    {
+      "product_img": "../public/motorcycle/motorcycle-naf-arab.jpg",
+      "product_name": "Naf Arab<strong> 4T Plus</strong>",
+      "product_description": "Naf Arab 4T Plus motorcycle oil is premium quality 4 stroke engine oil specially made for motorcycles. This oil is...",
+      "product_button": "Check Latest Price⤏",
+      "product_button_path": "https://example.com/products/portable-mini-projector"
+    }
+  ]
+}
