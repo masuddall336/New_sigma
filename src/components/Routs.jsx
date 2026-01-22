@@ -9,6 +9,9 @@ import Motorcycle from "./pages/motorcycle/Motorcycle";
 import Soil from "./pages/soil/Soil";
 import Sigma from "./pages/sigma/Sigma";
 import NafArab from "./pages/naf arab/NafArab";
+import Threewheeler from "./pages/three-wheeler/Threewheeler";
+import ThreeWheelerSoil from "./pages/three-wheeler-soil/ThreeWheelerSoil";
+import ThreeWheelerSigma from "./pages/three-wheeler-sigma/ThreeWheelerSigma";
 
 let router = createBrowserRouter([
     {
@@ -59,6 +62,30 @@ let router = createBrowserRouter([
                     return response.json(); // response is now defined
                 },
                 Component: NafArab
+            },
+            {
+                path: 'automotive/three-wheeler',
+                loader: async () => {
+                    const response = await fetch('/motorcycle.json'); // JSON in public folder
+                    return response.json(); // response is now defined
+                },
+                Component: Threewheeler
+            },
+            {
+                path: 'automotive/three-wheeler/soil',
+                loader: async () => {
+                    const response = await fetch('/motorcycle.json'); // JSON in public folder
+                    return response.json(); // response is now defined
+                },
+                Component: ThreeWheelerSoil
+            },
+            {
+                path: 'automotive/three-wheeler/sigma',
+                loader: async () => {
+                    const response = await fetch('/motorcycle.json'); // JSON in public folder
+                    return response.json(); // response is now defined
+                },
+                Component: ThreeWheelerSigma
             }
         ]
     },

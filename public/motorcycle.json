@@ -93,5 +93,78 @@
       "product_button": "Check Latest Price⤏",
       "product_button_path": "https://example.com/products/portable-mini-projector"
     }
+  ],
+  "three_wheeler": [
+    {
+      "banner": "/three-wheeler/three-wheeler.jpg"
+    },
+    {
+      "three_wheeler_engine_oil": [
+        {
+          "product_img": "../public/three-wheeler/three-wheeler-soil.jpg",
+          "product_name": "SOIL",
+          "product_description": "Sigma Oil Industries Limited SOIL branded Super 4T motorcycle engine oil. Use our SOIL products to supercharge your bike and explore the power of quality oil.",
+          "product_button": "Take a Look at SOIL Super 4T ⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        },
+        {
+          "product_img": "../public/three-wheeler/three-wheeler-sigma.jpg",
+          "product_name": "Sigma",
+          "product_description": "Sigma Oil Industries Limited Sigma Gold Multi Grade Motorcycle Engine Oil. Use our Sigma oil to supercharge your bike and explore the power of quality oil.",
+          "product_button": "See Sigma Gold Multi Grade Engine Oil ⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        }
+      ]
+    },
+    {
+      "SOIL_Branded_Engine_Oil_for_Three_Wheeler_Vehicles": [
+        {
+          "product_img": "/three-wheeler/three-wheeler-soil-zoom.jpg",
+          "product_name": "SOIL<strong> Zoom</strong>",
+          "product_description": "SOIL Zoom is a specially formulated super grade gasoline lubricant for all types of passenger cars...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        },
+        {
+          "product_img": "/three-wheeler/three-wheeler-soil-ornate.jpg",
+          "product_name": "SOIL<strong> Ornate</strong>",
+          "product_description": "SOIL Ornate is a premium quality diesel engine oil formulated to meet the latest API: CI-4 standard...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        },
+        {
+          "product_img": "/three-wheeler/three-wheeler-soil-luminous-geo.jpg",
+          "product_name": "SOIL<strong> Luminous GEO</strong>",
+          "product_description": "SOIL Luminous GEO is a premium quality diesel engine oil formulated to meet the latest standard...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        }
+      ]
+    },
+    {
+      "Sigma_Branded_Oil_for_Three_Wheelers": [
+        {
+          "product_img": "/three-wheeler/three-wheeler-sigma-gold.jpg",
+          "product_name": "Sigma<strong> Gold</strong>",
+          "product_description": "Gold is a premium quality diesel engine designs. It provides superior engine protection in ...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        },
+        {
+          "product_img": "/three-wheeler/three-wheeler-sigma-turbo-super-2020.jpg",
+          "product_name": "Sigma<strong> Turbo Super 2020</strong>",
+          "product_description": "Turbo Super 2020 is a premium quality diesel engine designs. It provides superior engine protection in ...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        },
+        {
+          "product_img": "/three-wheeler/three-wheeler-turbo-fleet-supreme.jpg",
+          "product_name": "Sigma <strong> Turbo Fleet Supreme</strong>",
+          "product_description": "Turbo Fleet Supreme is a premium quality diesel engine designs. It provides superior engine protection in ...",
+          "product_button": "See Details⤏",
+          "product_button_path": "https://example.com/products/portable-mini-projector"
+        }
+      ]
+    }
   ]
 }

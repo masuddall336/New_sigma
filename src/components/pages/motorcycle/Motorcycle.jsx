@@ -26,9 +26,9 @@ const Motorcycle = () => {
     return (
         <>
             <div className=''>
-                <div className='h-[15vh] md:h-[40vh]'>
+                <div className='h-[30vh] md:h-[40vh]'>
                     {/* header Part Banner */}
-                    <section id='header' className='relative h-[15vh]  md:h-[40vh] ' style={{
+                    <section id='header' className='relative h-[30vh]  md:h-[40vh] ' style={{
                         backgroundImage: `url(${banner})`,
                         backgroundRepeat: 'no-repeat',   // stops repeat
                         backgroundSize: 'cover',         // make it cover full section
@@ -55,7 +55,7 @@ const Motorcycle = () => {
                     </div>
                 </section>
                 {/* Premium Quality */}
-                <section className='bg-[#ececec]    py-[2%]'>
+                <section className='bg-[#ececec] pl-5 sm:pl-0  py-[2%]'>
                     <div id='navigation_path' className='max-w-[1080px] px-5 md:px-0 mx-auto   py-4 flex flex-col items-center'>
                         <img className='w-[2%]' src={drop} alt="" />
                         <span className='text-[#ad0000] italic font-bold text-center block' >Premium Quality</span>

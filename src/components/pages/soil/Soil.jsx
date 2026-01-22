@@ -21,9 +21,9 @@ const Soil = () => {
   return (
     <div>
       <header>
-        <div className='h-[15vh] md:h-[40vh]'>
+        <div className='h-[20vh] md:h-[60vh]'>
           {/* header Part Banner */}
-          <section id='header' className='relative h-[15vh]  md:h-[40vh] ' style={{
+          <section id='header' className='relative h-[20vh]  md:h-[60vh] ' style={{
             backgroundImage: `url(${banner})`,
             backgroundRepeat: 'no-repeat',   // stops repeat
             backgroundSize: 'cover',         // make it cover full section

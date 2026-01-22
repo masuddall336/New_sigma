@@ -106,22 +106,26 @@ const Navbar = () => {
                                             </ul> : ""
                                         }
                                     </div>
-                                    <li className="relative flex justify-between items-center" >Three Wheeler
-                                        <div onClick={() => handle_sub_menu_sub('threeWheeler')} >
-                                            {
-                                                valueSub === "threeWheeler" ? <TiMinus /> : <FaPlus />
-                                            }
-                                        </div>
-                                    </li>
+                                    <NavLink to='/automotive/three-wheeler'>
+                                        <li className="relative flex justify-between items-center" >Three Wheeler
+                                            <div onClick={(e) => handle_sub_menu_sub('threeWheeler', e)} >
+                                                {
+                                                    valueSub === "threeWheeler" ? <TiMinus /> : <FaPlus />
+                                                }
+                                            </div>
+                                        </li>
+                                    </NavLink>
                                     <div>
                                         {
                                             valueSub === "threeWheeler" ? <ul className="bg-[#245a94]">
-                                                <li className="relative">Soil
-                                                    <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
-                                                        <TiArrowSortedUp className='' />
-                                                    </div>
-                                                </li>
-                                                <li>Sigma</li>
+                                                <NavLink to='/automotive/three-wheeler/soil'>
+                                                    <li className="relative">Soil
+                                                        <div id="" className="absolute top-[-11px] submenu_top_arrow z-30">
+                                                            <TiArrowSortedUp className='' />
+                                                        </div>
+                                                    </li>
+                                                </NavLink>
+                                                <NavLink to="automotive/three-wheeler/sigma"><li>Sigma</li></NavLink>
                                             </ul> : ""
                                         }
                                     </div>
@@ -497,12 +501,14 @@ const Navbar = () => {
                                             </ul>
                                         </li>
                                     </NavLink>
-                                    <li className="relative three-wheeler">Three Wheeler
-                                        <ul className="threewheeler_sub absolute w-[100%] left-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
-                                            <li>Sigma</li>
-                                            <li>Soil</li>
-                                        </ul>
-                                    </li>
+                                    <NavLink to='/automotive/three-wheeler'>
+                                        <li className="relative three-wheeler">Three Wheeler
+                                            <ul className="threewheeler_sub absolute w-[100%] left-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                                <NavLink to='/automotive/three-wheeler/soil'><li>Soil</li></NavLink>
+                                                <NavLink to='/automotive/three-wheeler/sigma'><li>Sigma</li></NavLink>
+                                            </ul>
+                                        </li>
+                                    </NavLink>
                                     <li className=" passenger_car relative ">Passenger Car
                                         <ul className="passengercar_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
                                             <li>Sigma</li>

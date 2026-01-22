@@ -8,7 +8,7 @@ import { IoHome } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 const NafArab = () => {
   const allData = useLoaderData();
-  const Naf_arab_branded_4t_plus_bike_engine_Oil = allData.Naf_arab_branded_4t_plus_bike_engine_Oil;
+  const Naf_arab_branded_4t_plus_bike_engine_Oil = allData.three_wheeler;
 
   const [toggleQuc, setToggoleQuc] = useState('first');
   const handleToggleQuc = (targeted_quc) => {
@@ -21,13 +21,14 @@ const NafArab = () => {
   return (
     <div>
       <header>
-        <div className='h-[15vh] md:h-[40vh]'>
+        <div className='h-[25vh] md:h-[60vh]'>
           {/* header Part Banner */}
-          <section id='header' className='relative h-[15vh]  md:h-[40vh] ' style={{
-            backgroundImage: `url(${banner})`,
-            backgroundRepeat: 'no-repeat',   // stops repeat
-            backgroundSize: 'cover',         // make it cover full section
-            backgroundPosition: 'center',    // center the image
+          <section id='header' className=' relative
+    h-[25vh] md:h-[60vh]
+    bg-no-repeat
+    bg-cover
+    bg-right md:bg-center' style={{
+            backgroundImage: `url(${banner})`   // center the image
           }}>
             <div className='absolute left-[10%] top-[30%] sm:top-[30%] md:top-[38%] lg:top-[35%] w-[90%] md:w-[70%]'>
               <h1 className=' py-[3px] pl-3 text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] bg-no-repeat bg-[linear-gradient(93deg,rgba(0,39,118,.67)_0%,#fff0_50%)]  top-[36%] left-[10%]'>Naf Arab</h1>
