@@ -129,13 +129,15 @@ const Navbar = () => {
                                             </ul> : ""
                                         }
                                     </div>
-                                    <li className="relative flex justify-between items-center" >Passenger Car
-                                        <div onClick={() => handle_sub_menu_sub('PassengerCar')} >
-                                            {
-                                                valueSub === "PassengerCar" ? <TiMinus /> : <FaPlus />
-                                            }
-                                        </div>
-                                    </li>
+                                    <NavLink to='/automotive/passenger-car'>
+                                        <li className="relative flex justify-between items-center" >Passenger Car
+                                            <div onClick={(e) => handle_sub_menu_sub('PassengerCar', e)} >
+                                                {
+                                                    valueSub === "PassengerCar" ? <TiMinus /> : <FaPlus />
+                                                }
+                                            </div>
+                                        </li>
+                                    </NavLink>
                                     <div>
                                         {
                                             valueSub === "PassengerCar" ? <ul className="bg-[#245a94]">
@@ -509,12 +511,14 @@ const Navbar = () => {
                                             </ul>
                                         </li>
                                     </NavLink>
-                                    <li className=" passenger_car relative ">Passenger Car
-                                        <ul className="passengercar_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
-                                            <li>Sigma</li>
-                                            <li>Soil</li>
-                                        </ul>
-                                    </li>
+                                    <NavLink to='/automotive/passenger-car'>
+                                        <li className=" passenger_car relative ">Passenger Car
+                                            <ul className="passengercar_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
+                                                <li>Sigma</li>
+                                                <li>Soil</li>
+                                            </ul>
+                                        </li>
+                                    </NavLink>
                                     <li className="light_duty relative">Light Duty
                                         <ul className="lightduty_sub absolute w-[100%] right-[100%] text-[#fff] top-[-1px] bg-[#FF6319] hidden p-[0.5%]">
                                             <li>Soil</li>

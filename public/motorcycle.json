@@ -101,14 +101,14 @@
     {
       "three_wheeler_engine_oil": [
         {
-          "product_img": "../public/three-wheeler/three-wheeler-soil.jpg",
+          "product_img": "/three-wheeler/three-wheeler-soil.jpg",
           "product_name": "SOIL",
           "product_description": "Sigma Oil Industries Limited SOIL branded Super 4T motorcycle engine oil. Use our SOIL products to supercharge your bike and explore the power of quality oil.",
           "product_button": "Take a Look at SOIL Super 4T ⤏",
           "product_button_path": "https://example.com/products/portable-mini-projector"
         },
         {
-          "product_img": "../public/three-wheeler/three-wheeler-sigma.jpg",
+          "product_img": "/three-wheeler/three-wheeler-sigma.jpg",
           "product_name": "Sigma",
           "product_description": "Sigma Oil Industries Limited Sigma Gold Multi Grade Motorcycle Engine Oil. Use our Sigma oil to supercharge your bike and explore the power of quality oil.",
           "product_button": "See Sigma Gold Multi Grade Engine Oil ⤏",

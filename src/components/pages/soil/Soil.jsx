@@ -60,7 +60,7 @@ const Soil = () => {
             <img className='w-[1%] mx-auto' src={drop} alt="" />
             <em className='font-bold text-[#ad0000]'>Super Quality</em>
             <h2 className='text-[#032e5b] text-[2rem] font-bold tracking-wider'>Premium Motorcycle Engine Oil - SOIL</h2>
-            <p className='text-[#404040] max-w-[1000px] mx-auto py-5'>Sigma Oil Industries Limited manufactures SOIL branded premium motorcycle engine oil. Use our SOIL products to supercharge your bike performance and explore the power of quality.</p>
+            <p className='text-[#404040] max-w-[1000px] mx-auto py-5 px-5 sm:px-0'>Sigma Oil Industries Limited manufactures SOIL branded premium motorcycle engine oil. Use our SOIL products to supercharge your bike performance and explore the power of quality.</p>
             <NavLink className=' text-xs text-[#0056b3] hover:text-[#ff6319] uppercase font-[600] transition-all duration-300'>Ask for SOIL Brand Motorcycle Engine Oil Pricing ⤏</NavLink>
           </div>
         </section>

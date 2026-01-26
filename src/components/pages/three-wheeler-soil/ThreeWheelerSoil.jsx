@@ -57,7 +57,7 @@ const ThreeWheelerSoil = () => {
                         <img className='w-[1.5%] mx-auto' src={drop} alt="" />
                         <em className='font-bold text-[#ad0000]'>Premium Performance</em>
 
-                        <h2 className='text-[#032e5b] text-[2.2rem] font-bold tracking-wider '>Three-Wheeler Engine Oil</h2>
+                        <h2 className='text-[#032e5b] text-[2.2rem] px-1 sm:px-0 font-bold tracking-wider '>Three-Wheeler Engine Oil</h2>
                         <p className='text-[#404040] max-w-[1000px] mx-auto py-3 px-2 sm:px-0'>Sigma Oil Industries Limited manufactures SOIL branded premium three-wheeler engine oil. Use our SOIL branded oil to supercharge your three-wheelers vehicles and explore the power of extreme quality.</p>
                         <NavLink className=' text-xs text-[#0056b3] hover:text-[#ff6319] uppercase font-[600] transition-all duration-300'>Ask for Three-Wheeler Vehicle Engine Oil Pricing ⤏</NavLink>
                     </div>

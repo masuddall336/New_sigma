@@ -78,7 +78,7 @@ const Threewheeler = () => {
                             {
                                 three_wheeler.map(data => {
                                     return (
-                                        <div className='flex flex-col flex-1 border-1 w-[350px] border-[#aca9a9] bg-[#fffdfd] p-5 rounded shadow-[#5e5858]'>
+                                        <div className='flex flex-col flex-1 border-1 w-[375px] border-[#aca9a9] bg-[#fffdfd] p-5 rounded shadow-[#5e5858]'>
                                             <NavLink>
                                                 <img className='w-full object-cover ' src={data.product_img} alt={data.product_name} />
                                                 <h2 className='text-[#002776] inline hover:text-[#ff6319] text-[1.3rem] transition-all duration-300 ' dangerouslySetInnerHTML={{ __html: data.product_name }}></h2>

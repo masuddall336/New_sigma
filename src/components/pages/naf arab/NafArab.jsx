@@ -8,7 +8,7 @@ import { IoHome } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 const NafArab = () => {
   const allData = useLoaderData();
-  const Naf_arab_branded_4t_plus_bike_engine_Oil = allData.three_wheeler;
+  const Naf_arab_branded_4t_plus_bike_engine_Oil = allData.Naf_arab_branded_4t_plus_bike_engine_Oil;
 
   const [toggleQuc, setToggoleQuc] = useState('first');
   const handleToggleQuc = (targeted_quc) => {
@@ -68,10 +68,10 @@ const NafArab = () => {
          {/*Naf arab branded 4t plus bike engine Oil*/}
                         <section className='bg-[#ececec]  py-[2%]'>
                             <div id='navigation_path' className='max-w-[1080px] px-5 md:px-0 mx-auto   py-4 flex flex-col items-center'>
-                                <h2 className='text-[#032e5b] text-[2.3rem] text-center font-bold'>Naf arab branded 4t plus bike engine Oil</h2>
+                                <h2 className='text-[#032e5b] text-[2.3rem] text-center font-bold'>Naf Arab Branded Oil for Motorcycle Engines</h2>
                                 <div className='border-[1px] border-[#032e5b] w-[10%]'></div>
-                                <p className='text-[#404040] text-[1rem] py-3  text-center text-base/7'>Naf Arab 4T Plus uses power-sustain technology that handles heat and reduces friction, so the engine keeps delivering steady power. You get the acceleration whenever you need it. If you want an engine oil that stays strong for a long time, Naf Arab is a dependable choice.</p>
-                                <div className='max-w-[100%] sm:max-w-[30%]'>
+                                <p className='text-[#404040] text-[1rem] py-3  text-center text-base/7'><strong>Naf Arab 4T Plus</strong> provides power sustain technology that manages heat and friction ensuring continuous power delivery and provides on-demand acceleration. If you search for engine oil that would last for a long time, Naf Arab is the right choice.</p>
+                                <div className='max-w-[100%] sm:max-w-[30%]' >
                                     {
                                         Naf_arab_branded_4t_plus_bike_engine_Oil.map(data => {
                                             return (

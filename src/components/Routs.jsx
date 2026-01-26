@@ -12,6 +12,7 @@ import NafArab from "./pages/naf arab/NafArab";
 import Threewheeler from "./pages/three-wheeler/Threewheeler";
 import ThreeWheelerSoil from "./pages/three-wheeler-soil/ThreeWheelerSoil";
 import ThreeWheelerSigma from "./pages/three-wheeler-sigma/ThreeWheelerSigma";
+import PassengerCar from "./pages/passenger-car/PassengerCar";
 
 let router = createBrowserRouter([
     {
@@ -86,6 +87,10 @@ let router = createBrowserRouter([
                     return response.json(); // response is now defined
                 },
                 Component: ThreeWheelerSigma
+            },
+            {
+                path: 'automotive/passenger-car',
+                Component: PassengerCar
             }
         ]
     },
